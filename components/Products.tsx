@@ -20,8 +20,8 @@ const PRODUCTS = [
     payout: "Earn up to 3.5% of Loan Value",
     desc: "Help customers access instant, low-interest personal loans, business credit, or home loans.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5 text-brand-green">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-green">
+        <path d="M6 3h12M6 8h12M6 13h3M9 13c6.667 0 6.667-10 0-10M6 13l8.5 8" />
       </svg>
     ),
   },
@@ -95,15 +95,15 @@ export default function Products() {
               className="rounded-2xl border border-stone-100 bg-stone-50/20 p-6 flex flex-col justify-between premium-shadow premium-shadow-hover"
             >
               <div>
-                {/* Icon Wrap */}
-                <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-green-50 border border-brand-green/10 mb-4">
-                  {prod.icon}
+                {/* Icon and Title inline */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-50 border border-brand-green/10">
+                    {prod.icon}
+                  </div>
+                  <h3 className="text-[15px] font-semibold text-slate-900 font-sans leading-tight">
+                    {prod.title}
+                  </h3>
                 </div>
-                
-                {/* Product Title */}
-                <h3 className="text-[15px] font-semibold text-slate-900 font-sans">
-                  {prod.title}
-                </h3>
                 
                 {/* Product Description */}
                 <p className="mt-2 text-[13px] font-medium leading-relaxed text-slate-700 font-sans">

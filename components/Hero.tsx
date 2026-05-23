@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="flex flex-col items-start lg:col-span-6 animate-slide-up">
             
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-brand-green/20 bg-green-50/40 px-3.5 py-1 text-[11px] font-bold mb-6">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-brand-green/20 bg-green-50/40 px-3.5 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-[13px] font-bold mb-6">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-green animate-ping" />
               <span className="text-brand-green font-medium font-sans">paisa</span>
               <span className="text-brand-orange font-extrabold font-sans">milega</span>
@@ -64,23 +64,25 @@ export default function Hero() {
 
             {/* Lead Acquisition Form */}
             <div className="mt-8 w-full max-w-md">
-              <form onSubmit={handleSubmit} className="relative flex items-center rounded-full bg-white p-1.5 border border-stone-200/80 shadow-[0_2px_12px_rgba(15,23,42,0.02)] focus-within:border-brand-green/45 transition-colors duration-200">
-                <div className="flex items-center pl-3 text-stone-400 text-sm font-medium border-r border-stone-100 pr-2">
-                  +91
+              <form onSubmit={handleSubmit} className="relative flex flex-col sm:flex-row gap-2.5 sm:gap-0 rounded-2xl sm:rounded-full bg-transparent sm:bg-white p-0 sm:p-1.5 border-0 sm:border border-stone-200/80 sm:shadow-[0_2px_12px_rgba(15,23,42,0.02)] focus-within:border-brand-green/45 transition-colors duration-200">
+                <div className="flex items-center w-full bg-white rounded-full border border-stone-200/80 sm:border-0 p-1.5 sm:p-0">
+                  <div className="flex items-center pl-3 text-stone-400 text-sm font-medium border-r border-stone-100 pr-2">
+                    +91
+                  </div>
+                  <input
+                    type="tel"
+                    required
+                    pattern="[0-9]{10}"
+                    maxLength={10}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
+                    placeholder="Enter 10-digit mobile number"
+                    className="w-full bg-transparent px-3 py-2 text-sm font-semibold text-slate-900 outline-none placeholder-slate-400 min-w-0"
+                  />
                 </div>
-                <input
-                  type="tel"
-                  required
-                  pattern="[0-9]{10}"
-                  maxLength={10}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
-                  placeholder="Enter 10-digit mobile number"
-                  className="w-full bg-transparent px-3 py-2 text-sm font-semibold text-slate-900 outline-none placeholder-slate-400"
-                />
                 <button
                   type="submit"
-                  className="shrink-0 rounded-full bg-brand-green px-5 py-2.5 text-[12px] font-bold text-white hover:bg-brand-green-dark transition-colors hover:shadow-[0_4px_12px_rgba(0,130,72,0.15)] active:scale-95 duration-100"
+                  className="w-full sm:w-auto shrink-0 rounded-full bg-brand-green px-5 py-3 sm:py-2.5 text-[13px] sm:text-[12px] font-bold text-white hover:bg-brand-green-dark transition-colors hover:shadow-[0_4px_12px_rgba(0,130,72,0.15)] active:scale-95 duration-100"
                 >
                   Start Earning
                 </button>
