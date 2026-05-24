@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useLanguage } from "@/components/LanguageContext";
 
 const PRODUCTS = [
   {
@@ -25,7 +26,6 @@ const PRODUCTS = [
       </svg>
     ),
   },
-
   {
     title: "Savings & Demat Accounts",
     payout: "Earn up to ₹850 per account",
@@ -61,6 +61,8 @@ const PRODUCTS = [
 ];
 
 export default function Products() {
+  const { t } = useLanguage();
+
   return (
     <section id="products" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
@@ -68,56 +70,60 @@ export default function Products() {
         {/* Section Header */}
         <div className="flex flex-col items-start max-w-2xl mb-12 sm:mb-16">
           <span className="text-[11px] font-semibold text-brand-green tracking-wide uppercase mb-3">
-            Financial Products Suite
+            {t.products.badge}
           </span>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl font-sans">
-            High-commission financial products.
+            {t.products.title}
           </h2>
           <p className="mt-3.5 text-[14px] font-medium leading-relaxed text-slate-700 font-sans">
-            Choose from over 100+ partner products. Share lead generation links via WhatsApp, track progress in real-time, and get direct payouts.
+            {t.products.desc}
           </p>
         </div>
 
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PRODUCTS.map((prod, idx) => (
-            <div 
-              key={idx}
-              className="rounded-2xl border border-stone-100 bg-stone-50/20 p-6 flex flex-col justify-between premium-shadow premium-shadow-hover"
-            >
-              <div>
-                {/* Icon and Title inline */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-50 border border-brand-green/10">
-                    {prod.icon}
+          {PRODUCTS.map((prod, idx) => {
+            const localizedProd = t.products.list[idx] || prod;
+
+            return (
+              <div 
+                key={idx}
+                className="rounded-2xl border border-stone-100 bg-stone-50/20 p-6 flex flex-col justify-between premium-shadow premium-shadow-hover"
+              >
+                <div>
+                  {/* Icon and Title inline */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-50 border border-brand-green/10">
+                      {prod.icon}
+                    </div>
+                    <h3 className="text-[15px] font-semibold text-slate-900 font-sans leading-tight">
+                      {localizedProd.title}
+                    </h3>
                   </div>
-                  <h3 className="text-[15px] font-semibold text-slate-900 font-sans leading-tight">
-                    {prod.title}
-                  </h3>
+                  
+                  {/* Product Description */}
+                  <p className="mt-2 text-[13px] font-medium leading-relaxed text-slate-700 font-sans">
+                    {localizedProd.desc}
+                  </p>
                 </div>
-                
-                {/* Product Description */}
-                <p className="mt-2 text-[13px] font-medium leading-relaxed text-slate-700 font-sans">
-                  {prod.desc}
-                </p>
-              </div>
 
-              {/* Commission Tag */}
-              <div className="mt-6 border-t border-stone-100 pt-4 flex items-center justify-between">
-                <span className="text-[12px] font-semibold text-brand-green bg-green-50/70 border border-brand-green/10 rounded-full px-2.5 py-0.5">
-                  {prod.payout}
-                </span>
-                
-                {/* Minimal arrow */}
-                <span className="text-stone-400 group-hover:text-stone-600 transition-colors">
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
+                {/* Commission Tag */}
+                <div className="mt-6 border-t border-stone-100 pt-4 flex items-center justify-between">
+                  <span className="text-[12px] font-semibold text-brand-green bg-green-50/70 border border-brand-green/10 rounded-full px-2.5 py-0.5">
+                    {localizedProd.payout}
+                  </span>
+                  
+                  {/* Minimal arrow */}
+                  <span className="text-stone-400 group-hover:text-stone-600 transition-colors">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
 
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
 
       </div>
