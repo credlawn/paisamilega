@@ -7,8 +7,25 @@ export default function Features() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-white py-16 sm:py-20 border-b border-stone-100">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8">
+    <section className="bg-white py-16 sm:py-20 border-b border-stone-100 relative overflow-hidden">
+      
+      {/* Background Decorative Accents */}
+      <div className="absolute inset-0 pointer-events-none opacity-40 select-none">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 h-64 w-64 rounded-full bg-brand-green/5 blur-[100px]" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-brand-orange/5 blur-[120px]" />
+        
+        {/* Subtle geometric pattern */}
+        <svg className="absolute top-0 left-0 h-full w-full text-stone-100/50" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" stroke="currentColor" strokeWidth="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans">
             {t.home.features.title}

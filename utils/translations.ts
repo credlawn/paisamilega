@@ -157,7 +157,7 @@ export const translations: Record<Language, TranslationDict> = {
   en: {
     nav: {
       products: "Financial Products",
-      academy: "Academy & Training",
+      academy: "Saathi Academy",
       benefits: "Saathi Benefits",
       about: "About Us",
       cta: "Join as a Saathi",
@@ -279,16 +279,20 @@ export const translations: Record<Language, TranslationDict> = {
         desc: "We use cutting-edge technology to make your business easier, faster, and more profitable.",
         items: [
           {
-            title: "WhatsApp Cloud API",
+            title: "WhatsApp Chat",
             desc: "Get real-time lead updates and instant support directly on your WhatsApp.",
           },
           {
             title: "AI Smart Match",
-            desc: "Our AI (Roadmap) suggests the best financial products for each customer automatically.",
+            desc: "Our AI suggests the best financial products for each customer automatically.",
           },
           {
             title: "Live Dashboard",
-            desc: "A powerful real-time dashboard to manage your team and track every rupee.",
+            desc: "A powerful real-time dashboard to manage your customers and track every rupee.",
+          },
+          {
+            title: "Lead Management",
+            desc: "Organize and track your customer leads effectively with our advanced CRM tools.",
           },
         ],
       },
@@ -611,7 +615,7 @@ export const translations: Record<Language, TranslationDict> = {
   hi: {
     nav: {
       products: "वित्तीय उत्पाद",
-      academy: "अकादमी और ट्रेनिंग",
+      academy: "साथी अकादमी",
       benefits: "साथी के फायदे",
       about: "हमारे बारे में",
       cta: "साथी बनें",
@@ -738,16 +742,20 @@ export const translations: Record<Language, TranslationDict> = {
         desc: "हम आपके व्यवसाय को आसान, तेज़ और अधिक लाभदायक बनाने के लिए अत्याधुनिक तकनीक का उपयोग करते हैं।",
         items: [
           {
-            title: "WhatsApp Cloud API",
+            title: "WhatsApp Chat",
             desc: "सीधे अपने व्हाट्सएप पर रीयल-टाइम लीड अपडेट और तुरंत सहायता प्राप्त करें।",
           },
           {
             title: "AI स्मार्ट मैच",
-            desc: "हमारा AI (रोडमैप) स्वचालित रूप से प्रत्येक ग्राहक के लिए सर्वोत्तम वित्तीय उत्पादों का सुझाव देता है।",
+            desc: "हमारा AI स्वचालित रूप से प्रत्येक ग्राहक के लिए सर्वोत्तम वित्तीय उत्पादों का सुझाव देता है।",
           },
           {
             title: "लाइव डैशबोर्ड",
-            desc: "अपनी टीम को प्रबंधित करने और हर रुपये को ट्रैक करने के लिए एक शक्तिशाली रीयल-टाइम डैशबोर्ड।",
+            desc: "अपने कस्टमर्स को मैनेज करने और हर रुपये को ट्रैक करने के लिए एक शक्तिशाली रीयल-टाइम डैशबोर्ड।",
+          },
+          {
+            title: "लीड मैनेजमेंट",
+            desc: "हमारे एडवांस CRM टूल्स के साथ अपने कस्टमर लीड्स को प्रभावी ढंग से व्यवस्थित और ट्रैक करें।",
           },
         ],
       },

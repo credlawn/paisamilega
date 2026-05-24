@@ -8,6 +8,20 @@ export default function TechSupport() {
 
   return (
     <section className="bg-white py-16 sm:py-24 overflow-hidden relative border-b border-stone-100">
+      
+      {/* Background Decorative Accents */}
+      <div className="absolute inset-0 pointer-events-none opacity-40 select-none">
+        <div className="absolute -top-24 -left-20 h-96 w-96 rounded-full bg-brand-orange/5 blur-[100px]" />
+        
+        {/* Techy dotted pattern */}
+        <svg className="absolute top-0 right-0 h-full w-full text-stone-200/30" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.5" fill="currentColor" />
+          </pattern>
+          <rect width="100" height="100" fill="url(#dots)" />
+        </svg>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           

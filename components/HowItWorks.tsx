@@ -7,8 +7,19 @@ export default function HowItWorks() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#fafaf9] py-16 sm:py-24 border-b border-stone-100">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8">
+    <section className="bg-[#fafaf9] py-16 sm:py-24 border-b border-stone-100 relative overflow-hidden">
+      
+      {/* Background Decorative Accents */}
+      <div className="absolute inset-0 pointer-events-none opacity-30 select-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-brand-green/5 blur-[120px]" />
+        
+        {/* Subtle curved line pattern matching logo energy */}
+        <svg className="absolute bottom-0 left-0 h-1/2 w-full text-stone-200/40" fill="none" viewBox="0 0 1000 400" preserveAspectRatio="none">
+          <path d="M0,400 C200,350 400,450 600,300 C800,150 1000,250 1000,0" stroke="currentColor" strokeWidth="2" strokeDasharray="8 8" />
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans">
             {t.home.howItWorks.title}
