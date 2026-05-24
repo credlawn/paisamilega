@@ -58,6 +58,19 @@ const PRODUCTS = [
       </svg>
     ),
   },
+  {
+    title: "Loan Against Property",
+    payout: "Earn up to 1.5% of Loan Value",
+    desc: "Help property owners unlock the value of their residential or commercial assets with low-interest LAP.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-brand-green">
+        <path d="M3 21h18" />
+        <path d="M9 21V9l3-3 3 3v12" />
+        <path d="M9 13h6" />
+        <path d="M9 17h6" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Products() {
@@ -96,20 +109,20 @@ export default function Products() {
                     <div className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-50 border border-brand-green/10">
                       {prod.icon}
                     </div>
-                    <h3 className="text-[15px] font-semibold text-slate-900 font-sans leading-tight">
+                    <h3 className="text-[16px] font-semibold text-slate-900 font-sans leading-tight">
                       {localizedProd.title}
                     </h3>
                   </div>
                   
                   {/* Product Description */}
-                  <p className="mt-2 text-[13px] font-medium leading-relaxed text-slate-700 font-sans">
+                  <p className="mt-2 text-[14px] font-medium leading-relaxed text-slate-700 font-sans">
                     {localizedProd.desc}
                   </p>
                 </div>
 
                 {/* Commission Tag */}
                 <div className="mt-6 border-t border-stone-100 pt-4 flex items-center justify-between">
-                  <span className="text-[12px] font-semibold text-brand-green bg-green-50/70 border border-brand-green/10 rounded-full px-2.5 py-0.5">
+                  <span className="text-[13px] font-semibold text-brand-green bg-green-50/70 border border-brand-green/10 rounded-full px-2.5 py-0.5">
                     {localizedProd.payout}
                   </span>
                   

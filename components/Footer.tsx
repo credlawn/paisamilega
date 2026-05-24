@@ -9,7 +9,7 @@ export default function Footer() {
   const langPrefix = language === "hi" ? "/hi" : "";
 
   return (
-    <footer className="bg-[#fafaf9] border-t border-stone-100 pt-10 pb-6 sm:pt-14 sm:pb-8">
+    <footer className="bg-[#fafaf9] border-t border-stone-100 pt-8 pb-6 sm:pt-10 sm:pb-8">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         
         {/* Footer Top */}
@@ -26,6 +26,19 @@ export default function Footer() {
                 />
               </div>
             </Link>
+            
+            <div className="mt-2.5 mb-2">
+              <p className="text-[15px] font-bold text-slate-900 flex items-center gap-2 flex-wrap">
+                <span className="whitespace-nowrap">
+                  {language === "en" ? "Earn " : "कमाएं "}
+                  <span className="text-brand-orange font-black">₹1,00,000*</span>
+                </span>
+                <span className="text-[10px] font-black text-brand-green uppercase tracking-widest border border-brand-green/20 px-1.5 py-0.5 rounded-md bg-green-50/50">
+                  {language === "en" ? "Every Month" : "हर महीने"}
+                </span>
+              </p>
+            </div>
+
             <p className="text-[12px] leading-relaxed text-slate-600 max-w-xs font-sans font-medium">
               {t.footer.aboutText}
             </p>
@@ -74,11 +87,10 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${langPrefix}/#careers`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
-                    {t.footer.careers}
+                  <Link href={`${langPrefix}/data-policy`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
+                    {t.footer.dataPolicy}
                   </Link>
-                </li>
-                <li>
+                </li>                <li>
                   <Link href={`${langPrefix}/terms`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
                     {t.footer.terms}
                   </Link>

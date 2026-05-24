@@ -50,13 +50,22 @@ export interface TranslationDict {
     companyTitle: string;
     supportTitle: string;
     aboutUs: string;
-    careers: string;
+    dataPolicy: string;
     terms: string;
     privacy: string;
     copyrightPre: string;
     copyrightPost: string;
     addressLine1: string;
     addressLine2: string;
+  };
+  dataPolicy: {
+    title: string;
+    subtitle: string;
+    sections: {
+      title: string;
+      paragraphs: string[];
+      bullets?: string[];
+    }[];
   };
   terms: {
     title: string;
@@ -76,16 +85,57 @@ export interface TranslationDict {
       bullets?: string[];
     }[];
   };
-}
-
+  saathi: {
+    hero: {
+      badge: string;
+      title: string;
+      hook: string;
+      subtext: string;
+      cta: string;
+    };
+    winWin: {
+      title: string;
+      concept: string;
+      content: string;
+      points: string[];
+    };    income: {
+      title: string;
+      subtext: string;
+      cardTitle: string;
+      cardDesc: string;
+    };
+    benefits: {
+      title: string;
+      list: {
+        title: string;
+        desc: string;
+      }[];
+    };
+    howItWorks: {
+      title: string;
+      steps: {
+        title: string;
+        desc: string;
+      }[];
+    };
+    whoIsItFor: {
+      title: string;
+      list: {
+        title: string;
+        desc: string;
+        tag: string;
+      }[];
+    };
+  };
+  }
 export const translations: Record<Language, TranslationDict> = {
   en: {
     nav: {
       products: "Financial Products",
       academy: "Academy & Training",
-      benefits: "Partner Benefits",
+      benefits: "Saathi Benefits",
       about: "About Us",
-      cta: "Become a Partner",
+      cta: "Join as a Saathi",
     },
     hero: {
       badgeZero: " @ Zero Investment",
@@ -146,18 +196,67 @@ export const translations: Record<Language, TranslationDict> = {
       ],
     },
     footer: {
-      aboutText: "India's premium financial product distribution network. Empowering micro-entrepreneurs to build sustainable advisory businesses.",
+      aboutText: "India's trusted network for financial product distribution. Become a Saathi, help your community find the right banking products, and earn ₹1,00,000* every month from home.",
       productsTitle: "Products",
       companyTitle: "Company",
       supportTitle: "Contact & Support",
       aboutUs: "About Us",
-      careers: "Careers",
+      dataPolicy: "Data Policy",
       terms: "Terms of Service",
       privacy: "Privacy Policy",
       copyrightPre: "© 2026 ",
       copyrightPost: " operated by Credlawn India Private Limited",
       addressLine1: "1st Floor, Plot No-22, Zone-2, M.P. Nagar",
       addressLine2: "Bhopal, Madhya Pradesh - 462011",
+    },
+    dataPolicy: {
+      title: "Data Policy",
+      subtitle: "Effective Date: May 23, 2026 | Compliant with RBI Digital Lending Guidelines",
+      sections: [
+        {
+          title: "1. Data Collection & Purpose",
+          paragraphs: [
+            "At Paisa Milega, we collect only the minimum data required to facilitate financial product referrals and ensure regulatory compliance. This includes:",
+            "• Identity Data: Name, Mobile Number, PAN, and Aadhaar (for KYC).",
+            "• Financial Data: Bank details for commission payouts.",
+            "• Lead Data: Basic financial requirements of customers you refer.",
+            "This data is used solely for onboarding, verifying conversions, and processing your earnings."
+          ]
+        },
+        {
+          title: "2. Data Storage & Security",
+          paragraphs: [
+            "We prioritize the security of your information above all else:",
+            "• Localized Storage: All user data is stored on secure, encrypted servers physically located within the territory of India.",
+            "• Encryption: We use industry-standard SSL encryption for data in transit and AES-256 encryption for data at rest.",
+            "• Access Control: Only authorized personnel with strict multi-factor authentication can access anonymized datasets for audit purposes."
+          ]
+        },
+        {
+          title: "3. Data Retention Policy",
+          paragraphs: [
+            "We adhere to strict timelines for keeping your data:",
+            "• Credit Report Data: Any data sourced from credit bureaus (like Equifax or CIBIL) is retained for a maximum period of 6 months, after which it is automatically purged from our active systems.",
+            "• Account Data: General profile information is retained as long as your account is active. Transactional and tax records (TDS) are retained for 7 years as mandated by Indian financial laws."
+          ]
+        },
+        {
+          title: "4. Data Disposal & Shredding",
+          paragraphs: [
+            "When data is no longer required or upon a valid deletion request, we employ 'Digital Shredding' techniques. This ensures that the data is not just deleted but overwritten multiple times, making it technically impossible to recover. Sensitive documents like PAN/Aadhaar copies are masked in our archives to prevent misuse."
+          ]
+        },
+        {
+          title: "5. User Rights & Consent",
+          paragraphs: [
+            "You have the absolute right to:",
+            "• Request a copy of the data we hold about you.",
+            "• Ask for the correction of inaccurate information.",
+            "• Request the deletion of your account and associated data (subject to legal retention requirements).",
+            "We never share or sell your data to third-party marketing companies. Data is only shared with RBI-regulated banks and NBFCs after your explicit consent for specific product applications."
+          ]
+        }
+      ]
     },
     terms: {
       title: "Terms of Service",
@@ -335,15 +434,103 @@ export const translations: Record<Language, TranslationDict> = {
           ]
         }
       ]
-    }
+    },
+    saathi: {
+      hero: {
+        badge: "Paisa Milega Saathi Program",
+        title: "Become a Digital Financial Saathi.",
+        hook: "Earn up to ₹1,00,000 every month with zero investment.",
+        subtext: "Join the Digital India revolution. Refer banking products and earn high commissions while helping your community grow financially.",
+        cta: "Join as a Saathi Now",
+      },
+      winWin: {
+        title: "Everyone wins when you help.",
+        concept: "Everyone needs it, so why not through you?",
+        content: "In today's world, everyone needs a Credit Card or a Loan—whether it's for buying a new phone, paying school fees, or growing a business. When you help them choose the right bank offer, they benefit from expert guidance, and you earn a professional commission. It's a true win-win, done completely digitally!",
+        points: [
+          "Expert Guidance for them",
+          "Professional Commission for you",
+          "Stronger Financial Community",
+        ],
+      },
+      income: {
+        title: "High Earning Potential",
+        subtext: "Your income depends on your effort. No upper limit.",
+        cardTitle: "₹1,00,000 / Month",
+        cardDesc: "With just 1-2 successful referrals daily, you can reach this milestone easily.",
+      },
+      benefits: {
+        title: "Why become a Saathi?",
+        list: [
+          {
+            title: "Zero Investment",
+            desc: "Start your business without spending a single rupee.",
+          },
+          {
+            title: "100+ Trusted Banks",
+            desc: "Partner with India's top banks like HDFC, SBI, Axis, and more.",
+          },
+          {
+            title: "Academy Support",
+            desc: "We provide full training on products and how to find customers.",
+          },
+          {
+            title: "Flexible Timing",
+            desc: "Work whenever you want. You are your own boss.",
+          },
+        ],
+      },
+      howItWorks: {
+        title: "3 Simple Steps to Start",
+        steps: [
+          {
+            title: "Join & Register",
+            desc: "Download the app and sign up as a Saathi in minutes.",
+          },
+          {
+            title: "Suggest & Share",
+            desc: "Share the best bank offers with your friends and family via WhatsApp.",
+          },
+          {
+            title: "Earn & Grow",
+            desc: "Get your commission directly in your bank account on every success.",
+          },
+        ],
+      },
+      whoIsItFor: {
+        title: "Who can become a Saathi?",
+        list: [
+          {
+            title: "Students",
+            tag: "Pocket Money",
+            desc: "Turn your free time into professional income and learn finance.",
+          },
+          {
+            title: "Shop Owners",
+            tag: "Extra Income",
+            desc: "Offer extra services to your existing customers and earn more.",
+          },
+          {
+            title: "Housewives",
+            tag: "Independence",
+            desc: "Become financially independent while managing your home.",
+          },
+          {
+            title: "Salaried Employees",
+            tag: "Side Income",
+            desc: "Earn an extra side income along with your regular job.",
+          },
+        ],
+      },
+    },
   },
   hi: {
     nav: {
       products: "वित्तीय उत्पाद",
       academy: "अकादमी और ट्रेनिंग",
-      benefits: "पार्टनर के फायदे",
+      benefits: "साथी के फायदे",
       about: "हमारे बारे में",
-      cta: "पार्टनर बनें",
+      cta: "साथी बनें",
     },
     hero: {
       badgeZero: " @ ज़ीरो इन्वेस्टमेंट",
@@ -401,21 +588,75 @@ export const translations: Record<Language, TranslationDict> = {
           payout: "प्रति निवेश 1.2% तक कमाएं",
           desc: "म्यूचुअल फंड, फिक्स्ड डिपॉजिट और गोल्ड बॉन्ड जैसे स्थिर संपत्ति-निर्माण विकल्पों की सुविधा प्रदान करें।",
         },
+        {
+          title: "प्रॉपर्टी पर लोन (LAP)",
+          payout: "लोन राशि का 1.5% तक कमाएं",
+          desc: "प्रॉपर्टी मालिकों को कम ब्याज वाले LAP के साथ अपनी आवासीय या व्यावसायिक संपत्ति की वैल्यू अनलॉक करने में मदद करें।",
+        },
       ],
     },
     footer: {
-      aboutText: "भारत का प्रीमियम वित्तीय उत्पाद वितरण नेटवर्क। माइक्रो-उद्यमियों को टिकाऊ वित्तीय सलाहकार व्यवसाय बनाने के लिए सशक्त बनाना।",
+      aboutText: "भारत का भरोसेमंद फाइनेंशियल प्रोडक्ट डिस्ट्रीब्यूशन नेटवर्क। हमारे साथ 'साथी' बनें, अपने सर्कल को सही बैंकिंग प्रोडक्ट्स दिलाने में मदद करें और घर बैठे हर महीने ₹1,00,000* तक कमाएं।",
       productsTitle: "उत्पाद",
       companyTitle: "कंपनी",
       supportTitle: "संपर्क और सहायता",
       aboutUs: "हमारे बारे में",
-      careers: "करियर",
+      dataPolicy: "डेटा पॉलिसी",
       terms: "सेवा की शर्तें",
       privacy: "गोपनीयता नीति",
       copyrightPre: "© 2026 ",
       copyrightPost: " Credlawn India Private Limited द्वारा संचालित",
       addressLine1: "प्रथम तल, प्लॉट नंबर-22, जोन-2, एम.पी. नगर",
       addressLine2: "भोपाल, मध्य प्रदेश - 462011",
+    },
+    dataPolicy: {
+      title: "डेटा पॉलिसी",
+      subtitle: "प्रभावी तिथि: 23 मई, 2026 | RBI डिजिटल लेंडिंग दिशानिर्देशों के अनुरूप",
+      sections: [
+        {
+          title: "1. डेटा संग्रह और उद्देश्य",
+          paragraphs: [
+            "Paisa Milega में, हम केवल वित्तीय उत्पाद रेफरल की सुविधा और नियामक अनुपालन सुनिश्चित करने के लिए आवश्यक न्यूनतम डेटा एकत्र करते हैं। इसमें शामिल हैं:",
+            "• पहचान डेटा: नाम, मोबाइल नंबर, पैन (PAN), और आधार (KYC के लिए)।",
+            "• वित्तीय डेटा: कमीशन भुगतान के लिए बैंक विवरण।",
+            "• लीड डेटा: आपके द्वारा रेफर किए गए ग्राहकों की बुनियादी वित्तीय आवश्यकताएं।",
+            "यह डेटा केवल ऑनबोर्डिंग, कन्वर्शन की पुष्टि और आपकी कमाई को प्रोसेस करने के लिए उपयोग किया जाता है।"
+          ]
+        },
+        {
+          title: "2. डेटा स्टोरेज और सुरक्षा",
+          paragraphs: [
+            "हम आपकी जानकारी की सुरक्षा को सर्वोपरि रखते हैं:",
+            "• स्थानीय स्टोरेज: सभी उपयोगकर्ता डेटा भारत के क्षेत्र में स्थित सुरक्षित, एन्क्रिप्टेड सर्वर पर संग्रहीत किया जाता है।",
+            "• एन्क्रिप्शन: हम ट्रांजिट में डेटा के लिए उद्योग-मानक SSL एन्क्रिप्शन और रेस्ट में डेटा के लिए AES-256 एन्क्रिप्शन का उपयोग करते हैं।",
+            "• एक्सेस कंट्रोल: केवल अधिकृत कर्मचारी ही ऑडिट उद्देश्यों के लिए अनाम डेटासेट तक पहुंच सकते हैं।"
+          ]
+        },
+        {
+          title: "3. डेटा प्रतिधारण नीति (Retention Policy)",
+          paragraphs: [
+            "हम आपके डेटा को रखने के लिए सख्त समयसीमा का पालन करते हैं:",
+            "• क्रेडिट रिपोर्ट डेटा: क्रेडिट ब्यूरो (जैसे Equifax या CIBIL) से प्राप्त किसी भी डेटा को अधिकतम 6 महीने की अवधि के लिए रखा जाता है, जिसके बाद इसे हमारे सक्रिय सिस्टम से स्वचालित रूप से हटा दिया जाता है।",
+            "• अकाउंट डेटा: जब तक आपका खाता सक्रिय है, सामान्य प्रोफाइल जानकारी रखी जाती है। भारतीय वित्तीय कानूनों के अनुसार ट्रांजेक्शनल और टैक्स रिकॉर्ड (TDS) 7 वर्षों के लिए रखे जाते हैं।"
+          ]
+        },
+        {
+          title: "4. डेटा निपटान और श्रेडिंग (Digital Shredding)",
+          paragraphs: [
+            "जब डेटा की आवश्यकता नहीं रह जाती है या वैध विलोपन अनुरोध प्राप्त होता है, तो हम 'डिजिटल श्रेडिंग' तकनीकों का उपयोग करते हैं। यह सुनिश्चित करता है कि डेटा केवल हटाया नहीं गया है, बल्कि उसे कई बार ओवरराइट किया गया है, जिससे उसे रिकवर करना तकनीकी रूप से असंभव हो जाता है। दुरुपयोग को रोकने के लिए पैन/आधार प्रतियों जैसे संवेदनशील दस्तावेजों को हमारे अभिलेखागार में मास्क (Mask) किया जाता है।"
+          ]
+        },
+        {
+          title: "5. उपयोगकर्ता अधिकार और सहमति",
+          paragraphs: [
+            "आपके पास पूर्ण अधिकार है:",
+            "• हमारे पास मौजूद अपने डेटा की एक प्रति मांगना।",
+            "• गलत जानकारी को सही करने का अनुरोध करना।",
+            "• अपने खाते और संबंधित डेटा को हटाने का अनुरोध करना (कानूनी प्रतिधारण आवश्यकताओं के अधीन)।",
+            "हम आपका डेटा कभी भी तीसरे पक्ष की मार्केटिंग कंपनियों के साथ साझा या बेचते नहीं हैं। विशिष्ट उत्पाद आवेदनों के लिए आपकी स्पष्ट सहमति के बाद ही डेटा को केवल RBI द्वारा विनियमित बैंकों और NBFC के साथ साझा किया जाता है।"
+          ]
+        }
+      ]
     },
     terms: {
       title: "सेवा की शर्तें",
@@ -600,6 +841,94 @@ export const translations: Record<Language, TranslationDict> = {
           ]
         }
       ]
-    }
+    },
+    saathi: {
+      hero: {
+        badge: "Paisa Milega साथी प्रोग्राम",
+        title: "घर बैठे बनें डिजिटल फाइनेंशियल साथी।",
+        hook: "बिना किसी निवेश के हर महीने ₹1,00,000 तक कमाएं।",
+        subtext: "डिजिटल इंडिया क्रांति का हिस्सा बनें। अपने सर्कल को आर्थिक रूप से आगे बढ़ने में मदद करें और साथ ही बेहतरीन कमीशन भी कमाएं।",
+        cta: "अभी साथी के रूप में जुड़ें",
+      },
+      winWin: {
+        title: "मदद आपकी, तरक्की सबकी।",
+        concept: "जरूरत तो सबको है, तो आपके जरिए क्यों नहीं?",
+        content: "आज के समय में, हर किसी को क्रेडिट कार्ड या लोन की जरूरत होती है—चाहे वह नया फोन खरीदना हो, स्कूल की फीस भरनी हो, या व्यवसाय बढ़ाना हो। जब आप उन्हें सही बैंक ऑफर चुनने में मदद करते हैं, तो उन्हें विशेषज्ञ मार्गदर्शन का लाभ मिलता है, और आप एक पेशेवर कमीशन कमाते हैं। यह पूरी तरह से डिजिटल रूप से किया गया एक वास्तविक विन-विन (win-win) है!",
+        points: [
+          "उनके लिए सही सलाह",
+          "आपके लिए शानदार कमीशन",
+          "मजबूत आर्थिक समाज",
+        ],
+      },
+      income: {
+        title: "बड़ी कमाई की संभावना",
+        subtext: "आपकी आय आपकी मेहनत पर निर्भर करती है। कोई ऊपरी सीमा नहीं।",
+        cardTitle: "₹1,00,000 / महीना",
+        cardDesc: "हर दिन केवल 1-2 सफल रेफरल के साथ, आप इस मुकाम तक आसानी से पहुँच सकते हैं।",
+      },
+      benefits: {
+        title: "साथी क्यों बनें?",
+        list: [
+          {
+            title: "जीरो इन्वेस्टमेंट",
+            desc: "बिना एक रुपया खर्च किए अपना बिजनेस शुरू करें।",
+          },
+          {
+            title: "100+ भरोसेमंद बैंक",
+            desc: "HDFC, SBI, Axis और अन्य जैसे भारत के शीर्ष बैंकों के साथ पार्टनर बनें।",
+          },
+          {
+            title: "अकादमी सपोर्ट",
+            desc: "हम उत्पादों और ग्राहकों को खोजने के तरीके पर पूरी ट्रेनिंग प्रदान करते हैं।",
+          },
+          {
+            title: "फ्लेक्सिबल टाइमिंग",
+            desc: "जब चाहें काम करें। आप अपने खुद के बॉस हैं।",
+          },
+        ],
+      },
+      howItWorks: {
+        title: "शुरू करने के 3 आसान चरण",
+        steps: [
+          {
+            title: "जुड़ें और रजिस्टर करें",
+            desc: "ऐप डाउनलोड करें और मिनटों में साथी के रूप में साइन अप करें।",
+          },
+          {
+            title: "सुझाव दें और शेयर करें",
+            desc: "व्हाट्सएप के माध्यम से अपने दोस्तों और परिवार के साथ बेहतरीन बैंक ऑफर्स शेयर करें।",
+          },
+          {
+            title: "कमाएं और बढ़ें",
+            desc: "हर सफलता पर अपना कमीशन सीधे अपने बैंक खाते में प्राप्त करें।",
+          },
+        ],
+      },
+      whoIsItFor: {
+        title: "साथी कौन बन सकता है?",
+        list: [
+          {
+            title: "छात्र (Students)",
+            tag: "पॉकेट मनी",
+            desc: "अपने खाली समय को पेशेवर आय में बदलें और फाइनेंस सीखें।",
+          },
+          {
+            title: "दुकानदार",
+            tag: "अतिरिक्त आय",
+            desc: "अपने मौजूदा ग्राहकों को अतिरिक्त सेवाएं प्रदान करें और अधिक कमाएं।",
+          },
+          {
+            title: "गृहिणियां (Housewives)",
+            tag: "आत्मनिर्भरता",
+            desc: "अपना घर संभालते हुए आर्थिक रूप से स्वतंत्र बनें।",
+          },
+          {
+            title: "नौकरीपेशा लोग",
+            tag: "साइड इनकम",
+            desc: "अपनी नियमित नौकरी के साथ अतिरिक्त साइड इनकम कमाएं।",
+          },
+        ],
+      },
+    },
   }
 };
