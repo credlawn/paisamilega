@@ -58,6 +58,31 @@ export interface TranslationDict {
     addressLine1: string;
     addressLine2: string;
   };
+  home: {
+    features: {
+      title: string;
+      list: {
+        title: string;
+        desc: string;
+      }[];
+    };
+    howItWorks: {
+      title: string;
+      steps: {
+        title: string;
+        desc: string;
+      }[];
+    };
+    tech: {
+      badge: string;
+      title: string;
+      desc: string;
+      items: {
+        title: string;
+        desc: string;
+      }[];
+    };
+  };
   dataPolicy: {
     title: string;
     subtitle: string;
@@ -208,6 +233,65 @@ export const translations: Record<Language, TranslationDict> = {
       copyrightPost: " operated by Credlawn India Private Limited",
       addressLine1: "1st Floor, Plot No-22, Zone-2, M.P. Nagar",
       addressLine2: "Bhopal, Madhya Pradesh - 462011",
+    },
+    home: {
+      features: {
+        title: "Why choose Paisa Milega?",
+        list: [
+          {
+            title: "Zero Investment",
+            desc: "Start your professional journey without any upfront costs or hidden fees.",
+          },
+          {
+            title: "100+ Trusted Brands",
+            desc: "Access products from India's top banks and financial institutions.",
+          },
+          {
+            title: "Highest Payouts",
+            desc: "Enjoy industry-leading commission rates with direct bank transfers.",
+          },
+          {
+            title: "Dedicated Support",
+            desc: "Get expert assistance and training through our Saathi Academy.",
+          },
+        ],
+      },
+      howItWorks: {
+        title: "Start earning in 3 simple steps",
+        steps: [
+          {
+            title: "Join as a Saathi",
+            desc: "Download the app and complete your digital onboarding in minutes.",
+          },
+          {
+            title: "Share Offers",
+            desc: "Send personalized product links to your network via WhatsApp.",
+          },
+          {
+            title: "Earn Big",
+            desc: "Track leads in real-time and get commissions on every success.",
+          },
+        ],
+      },
+      tech: {
+        badge: "Next-Gen Tech",
+        title: "The smartest way to earn.",
+        desc: "We use cutting-edge technology to make your business easier, faster, and more profitable.",
+        items: [
+          {
+            title: "WhatsApp Cloud API",
+            desc: "Get real-time lead updates and instant support directly on your WhatsApp.",
+          },
+          {
+            title: "AI Smart Match",
+            desc: "Our AI (Roadmap) suggests the best financial products for each customer automatically.",
+          },
+          {
+            title: "Live Dashboard",
+            desc: "A powerful real-time dashboard to manage your team and track every rupee.",
+          },
+        ],
+      },
     },
     dataPolicy: {
       title: "Data Policy",
@@ -608,6 +692,65 @@ export const translations: Record<Language, TranslationDict> = {
       copyrightPost: " Credlawn India Private Limited द्वारा संचालित",
       addressLine1: "प्रथम तल, प्लॉट नंबर-22, जोन-2, एम.पी. नगर",
       addressLine2: "भोपाल, मध्य प्रदेश - 462011",
+    },
+    home: {
+      features: {
+        title: "Paisa Milega ही क्यों चुनें?",
+        list: [
+          {
+            title: "ज़ीरो इन्वेस्टमेंट",
+            desc: "बिना किसी अग्रिम लागत या छिपे हुए शुल्क के अपनी व्यावसायिक यात्रा शुरू करें।",
+          },
+          {
+            title: "100+ भरोसेमंद ब्रांड",
+            desc: "भारत के शीर्ष बैंकों और वित्तीय संस्थानों के उत्पादों तक पहुंचें।",
+          },
+          {
+            title: "उच्चतम भुगतान (Payouts)",
+            desc: "सीधे बैंक ट्रांसफर के साथ उद्योग-अग्रणी कमीशन दरों का आनंद लें।",
+          },
+          {
+            title: "समर्पित सहायता",
+            desc: "हमारी Saathi Academy के माध्यम से विशेषज्ञ सहायता और ट्रेनिंग प्राप्त करें।",
+          },
+        ],
+      },
+      howItWorks: {
+        title: "3 आसान चरणों में कमाना शुरू करें",
+        steps: [
+          {
+            title: "साथी के रूप में जुड़ें",
+            desc: "ऐप डाउनलोड करें और मिनटों में अपनी डिजिटल ऑनबोर्डिंग पूरी करें।",
+          },
+          {
+            title: "ऑफ़र शेयर करें",
+            desc: "व्हाट्सएप के माध्यम से अपने नेटवर्क को व्यक्तिगत उत्पाद लिंक भेजें।",
+          },
+          {
+            title: "बड़ी कमाई करें",
+            desc: "वास्तविक समय में लीड्स ट्रैक करें और हर सफलता पर कमीशन प्राप्त करें।",
+          },
+        ],
+      },
+      tech: {
+        badge: "नेक्स्ट-जेन टेक",
+        title: "कमाने का सबसे स्मार्ट तरीका।",
+        desc: "हम आपके व्यवसाय को आसान, तेज़ और अधिक लाभदायक बनाने के लिए अत्याधुनिक तकनीक का उपयोग करते हैं।",
+        items: [
+          {
+            title: "WhatsApp Cloud API",
+            desc: "सीधे अपने व्हाट्सएप पर रीयल-टाइम लीड अपडेट और तुरंत सहायता प्राप्त करें।",
+          },
+          {
+            title: "AI स्मार्ट मैच",
+            desc: "हमारा AI (रोडमैप) स्वचालित रूप से प्रत्येक ग्राहक के लिए सर्वोत्तम वित्तीय उत्पादों का सुझाव देता है।",
+          },
+          {
+            title: "लाइव डैशबोर्ड",
+            desc: "अपनी टीम को प्रबंधित करने और हर रुपये को ट्रैक करने के लिए एक शक्तिशाली रीयल-टाइम डैशबोर्ड।",
+          },
+        ],
+      },
     },
     dataPolicy: {
       title: "डेटा पॉलिसी",

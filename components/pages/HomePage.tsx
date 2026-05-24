@@ -3,7 +3,10 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Features from "@/components/Features";
 import Products from "@/components/Products";
+import HowItWorks from "@/components/HowItWorks";
+import TechSupport from "@/components/TechSupport";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -12,7 +15,10 @@ export default function HomePage() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <Features />
         <Products />
+        <HowItWorks />
+        <TechSupport />
       </main>
       <Footer />
     </div>
