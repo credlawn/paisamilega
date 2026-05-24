@@ -45,11 +45,15 @@ export default function Hero() {
           <div className="flex flex-col items-start lg:col-span-6 animate-slide-up">
             
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-brand-green/20 bg-green-50/40 px-3.5 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-[13px] font-bold mb-6">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2.5 rounded-full border border-brand-green/20 bg-green-50/40 px-3.5 py-1 sm:px-4.5 sm:py-1.5 mb-6 text-[14px] sm:text-[15px] font-sans">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-green animate-ping" />
-              <span className="text-brand-green font-medium font-sans">paisa</span>
-              <span className="text-brand-orange font-extrabold font-sans">milega</span>
-              <span className="text-slate-500 font-semibold font-sans"> @ Zero Investment</span>
+              <span className="font-semibold">
+                <span className="text-brand-green">paisa</span>
+                <span className="text-brand-orange ml-0.5">milega</span>
+              </span>
+              <span className="text-slate-600 font-semibold">
+                @ Zero Investment
+              </span>
             </div>
 
             {/* Headline */}
@@ -58,7 +62,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtext */}
-            <p className="mt-4 text-[15px] font-medium leading-relaxed text-slate-700 max-w-lg font-sans">
+            <p className="mt-4 text-[15px] sm:text-[16px] font-normal leading-relaxed text-slate-700 max-w-lg font-sans">
               Start your side income with <span className="text-brand-green font-medium">paisa</span> <span className="text-brand-orange font-extrabold">milega</span> @ zero investment. Share premium Credit Card and Loan offers with your network. They get the best bank deals, and you earn high payouts sent directly to your bank account.
             </p>
 

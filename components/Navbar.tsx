@@ -22,16 +22,16 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/#products" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#products" className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               Financial Products
             </Link>
-            <Link href="/#academy" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#academy" className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               Academy & Training
             </Link>
-            <Link href="/#benefits" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#benefits" className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               Partner Benefits
             </Link>
-            <Link href="/#about" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#about" className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               About Us
             </Link>
           </nav>
