@@ -55,6 +55,8 @@ export interface TranslationDict {
     privacy: string;
     copyrightPre: string;
     copyrightPost: string;
+    addressLine1: string;
+    addressLine2: string;
   };
   terms: {
     title: string;
@@ -153,7 +155,9 @@ export const translations: Record<Language, TranslationDict> = {
       terms: "Terms of Service",
       privacy: "Privacy Policy",
       copyrightPre: "© 2026 ",
-      copyrightPost: " operated by Credlawn India Private Limited | All Rights Reserved",
+      copyrightPost: " operated by Credlawn India Private Limited",
+      addressLine1: "1st Floor, Plot No-22, Zone-2, M.P. Nagar",
+      addressLine2: "Bhopal, Madhya Pradesh - 462011",
     },
     terms: {
       title: "Terms of Service",
@@ -171,55 +175,96 @@ export const translations: Record<Language, TranslationDict> = {
             "To register as a financial advisor, partner, or agent on our Platform (both Web and Mobile App), you must satisfy the following criteria:"
           ],
           bullets: [
-            "You must be an Indian citizen of at least 18 years of age.",
+            "You must be an Indian citizen of at least 18 years of age and residing in India.",
             "You must provide accurate, current, and complete KYC verification information, including Aadhaar, PAN card, and active bank account details for commission transfers.",
-            "You are solely responsible for protecting your account credentials, passwords, and OTP access. Any actions taken through your Mobile App or Web account are considered authorized by you."
+            "You are solely responsible for protecting your account credentials, passwords, and OTP access. Any actions taken through your Mobile App or Web account are considered authorized by you.",
+            "Registration is at the sole discretion of the Company, and we reserve the right to reject any application without providing reasons."
           ]
         },
         {
-          title: "3. Scope of Services",
+          title: "3. User Obligations & Code of Conduct",
           paragraphs: [
-            "Paisa Milega operates as a digital referral and distribution network. Through the Platform, partners can access, track, and share unique lead generation links for retail financial products (such as Credit Cards, Personal Loans, Business Loans, Savings Accounts, Demat Accounts, and Investment products) with prospective customers. Once a customer successfully obtains a financial product through your referral link, you become eligible for payouts based on our active commission matrices."
-          ]
-        },
-        {
-          title: "4. Commissions & Payout Terms",
-          paragraphs: [],
-          bullets: [
-            "Commissions are calculated based on successful product conversions, which are verified directly by our partner banking and lending institutions.",
-            "All payouts are processed and sent electronically to your registered and verified bank account.",
-            "Tax Deducted at Source (TDS) will be deducted at prevailing rates in compliance with the Income Tax Department of India guidelines.",
-            "We reserve the right to withhold, freeze, or cancel payouts if any fraudulent activity, spamming, fake document submissions, or customer misrepresentation is detected via your account."
-          ]
-        },
-        {
-          title: "5. Code of Conduct & Rules of Use",
-          paragraphs: [
-            "Partners using the website and Mobile App must strictly adhere to the following rules:"
+            "As a partner, you agree to adhere to the highest standards of professional conduct:"
           ],
           bullets: [
-            "Do not charge customers directly for referral links or consultation services. Paisa Milega services are completely free for end-customers.",
-            "Do not misrepresent loan features, credit card features, interest rates, or eligibility guidelines.",
-            "Do not submit falsified customer details or manipulate bank documentation.",
-            "Do not distribute referral links using spam techniques (such as unsolicited message distributions or mass automated posting)."
+            "No Service Fees: You shall not charge any fees or commissions directly from the customers for referral services. Our services are free for end-customers.",
+            "Accurate Representation: You must not misrepresent loan features, interest rates, eligibility criteria, or hidden charges of any financial product.",
+            "Data Privacy: You must obtain explicit consent from customers before collecting or submitting their data on the Platform.",
+            "Prohibited Acts: You shall not engage in 'spamming', use automated scripts, or attempt to reverse-engineer any part of the Platform.",
+            "Brand Usage: You shall not use the 'Paisa Milega' name or logo for any unauthorized marketing, including creating social media handles or websites that imply an official partnership beyond lead generation."
           ]
         },
         {
-          title: "6. Intermediary Status & Limitation of Liability",
+          title: "4. Intellectual Property Rights",
           paragraphs: [
-            "Credlawn India Private Limited acts purely as an intermediary referral service. The final approval, underwriting, and issuance of credit cards, loans, or accounts are at the sole discretion of our partner banks and lending institutions. We are not liable for any customer rejections, credit delays, or changes in lending policies by the respective banking partners."
+            "All content, logos, trademarks, graphics, UI/UX design, code, and proprietary algorithms on the Platform are the exclusive property of Credlawn India Private Limited. You are granted a limited, non-exclusive, revocable, and non-transferable license to use the Platform solely for the purpose of financial product distribution as authorized by us. Any unauthorized reproduction or distribution is strictly prohibited and may lead to legal action."
           ]
         },
         {
-          title: "7. Modification, Updates & Termination",
+          title: "5. Commissions, Payouts & Clawback",
           paragraphs: [
-            "We reserve the right to modify the Platform features, layout, Terms of Service, or commission payout rates at any time. Continued use of the website or Mobile App after updates indicates acceptance of the revised terms. We reserve the absolute right to suspend or terminate your account without notice for breaches of our code of conduct."
+            "Earnings and payouts are governed by the following rules:"
+          ],
+          bullets: [
+            "Verification: Commissions are only credited after successful conversion and verification by our partner banking/financial institutions.",
+            "Dynamic Payouts: The Company reserves the right to modify, update, or change the payout structure, commission rates, and incentive schemes at any time at its sole discretion without prior notice.",
+            "TDS & Taxes: All payouts are subject to Tax Deducted at Source (TDS) as per the Income Tax Act of India.",
+            "Clawback Policy: We reserve the right to 'clawback' or deduct commissions already paid if the partner bank subsequently identifies the lead as fraudulent or if the customer cancels the product within a 'look-back' period.",
+            "Penalty Recovery: If any bank, NBFC, or lending partner imposes a fine or penalty on the Company due to your misconduct, submission of fake documents, or breach of their lending guidelines, we reserve the right to deduct or recover the equivalent penalty amount from your accrued or future earnings.",
+            "Wallet Expiry: Earnings not transferred to a bank account for more than 180 days may be subject to expiry or forfeiture at the Company's discretion."
           ]
         },
         {
-          title: "8. Contact Us",
+          title: "6. Confidentiality",
           paragraphs: [
-            "For questions regarding these Terms, or if you need support with the website or Mobile App, please contact support at support@paisamilega.in."
+            "You may receive access to confidential information, including lead data, payout structures, and internal strategies. You agree to maintain strict confidentiality and not disclose such information to any third party. This obligation survives even after the termination of your partnership with the Platform."
+          ]
+        },
+        {
+          title: "7. Limitation of Liability & Indemnification",
+          paragraphs: [
+            "Limitation: The Platform is provided on an 'as-is' and 'as-available' basis. Credlawn India Private Limited shall not be liable for any indirect, incidental, or consequential damages, including loss of profits or data, resulting from your use of the Platform.",
+            "Indemnification: You agree to indemnify, defend, and hold harmless the Company and its directors from any claims, losses, legal fees, or damages arising out of your breach of these terms, negligence, or misrepresentation to customers."
+          ]
+        },
+        {
+          title: "8. Termination & Suspension",
+          paragraphs: [
+            "We reserve the right to suspend or terminate your account immediately, without notice, if:",
+            "a) You violate any provision of these Terms.",
+            "b) You engage in fraudulent activities or submit falsified documents.",
+            "c) Your actions are deemed detrimental to the reputation of the Company.",
+            "Upon termination, your right to use the Platform ceases, and any pending commissions may be frozen or forfeited."
+          ]
+        },
+        {
+          title: "9. Governing Law & Dispute Resolution",
+          paragraphs: [
+            "These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Bhopal, Madhya Pradesh."
+          ]
+        },
+        {
+          title: "11. Relationship of Parties",
+          paragraphs: [
+            "Your relationship with Credlawn India Private Limited is that of an independent contractor. Nothing in these Terms shall be construed to create a partnership, joint venture, employer-employee, or agency relationship. You have no authority to bind the Company to any obligations or represent yourself as an official agent or employee."
+          ]
+        },
+        {
+          title: "12. Communication Consent",
+          paragraphs: [
+            "By registering on the Platform, you provide your explicit consent to be contacted by the Company via phone calls, SMS, RCS, WhatsApp, and email for the purposes of account verification, lead updates, training materials, and promotional offers. This consent overrides any registration on the National Do Not Call (DNC) Registry."
+          ]
+        },
+        {
+          title: "13. Modification of Agreement",
+          paragraphs: [
+            "The Company reserves the right to modify, amend, or update these Terms of Service at any time. Any changes will be effective immediately upon posting on the Platform. Your continued use of the Platform following such changes constitutes your acceptance of the revised Terms."
+          ]
+        },
+        {
+          title: "14. Contact Us",
+          paragraphs: [
+            "For questions regarding these Terms or if you need support, please contact us at support@paisamilega.in."
           ]
         }
       ]
@@ -285,7 +330,7 @@ export const translations: Record<Language, TranslationDict> = {
           paragraphs: [
             "In accordance with the Information Technology Act, 2000 and rules made thereunder, the name and contact details of our Grievance Officer are provided below. We will address any grievances, disputes, or data issues within 15 days of receipt:",
             "Name: Grievance Officer, Credlawn India Private Limited",
-            "Address: 1st Floor, Plot No-22, Zone-2, M.P. Nagar, Bhopal, Madhya Pradesh - 462001, India",
+            "Address: 1st Floor, Plot No-22, Zone-2, M.P. Nagar, Bhopal, Madhya Pradesh - 462011, India",
             "Email: support@paisamilega.in"
           ]
         }
@@ -368,7 +413,9 @@ export const translations: Record<Language, TranslationDict> = {
       terms: "सेवा की शर्तें",
       privacy: "गोपनीयता नीति",
       copyrightPre: "© 2026 ",
-      copyrightPost: " Credlawn India Private Limited द्वारा संचालित | सर्वाधिकार सुरक्षित",
+      copyrightPost: " Credlawn India Private Limited द्वारा संचालित",
+      addressLine1: "प्रथम तल, प्लॉट नंबर-22, जोन-2, एम.पी. नगर",
+      addressLine2: "भोपाल, मध्य प्रदेश - 462011",
     },
     terms: {
       title: "सेवा की शर्तें",
@@ -386,55 +433,96 @@ export const translations: Record<Language, TranslationDict> = {
             "हमारे वित्तीय सलाहकार, पार्टनर या एजेंट के रूप में हमारे प्लेटफ़ॉर्म (वेब और मोबाइल ऐप दोनों) पर पंजीकरण करने के लिए, आपको निम्नलिखित मानदंडों को पूरा करना होगा:"
           ],
           bullets: [
-            "आपको कम से कम 18 वर्ष की आयु का भारतीय नागरिक होना चाहिए।",
+            "आपको कम से कम 18 वर्ष की आयु का भारतीय नागरिक होना चाहिए और भारत में निवास करना चाहिए।",
             "आपको कमीशन ट्रांसफर के लिए आधार, पैन कार्ड और सक्रिय बैंक खाता विवरण सहित सटीक, वर्तमान और पूर्ण केवाईसी सत्यापन जानकारी प्रदान करनी होगी।",
-            "आप अपने खाते के क्रेडेंशियल, पासवर्ड और ओटीपी एक्सेस की सुरक्षा के लिए पूरी तरह से जिम्मेदार हैं। आपके मोबाइल ऐप या वेब खाते के माध्यम से की गई किसी भी कार्रवाई को आपके द्वारा अधिकृत माना जाता है।"
+            "आप अपने खाते के क्रेडेंशियल, पासवर्ड और ओटीपी एक्सेस की सुरक्षा के लिए पूरी तरह से जिम्मेदार हैं। आपके मोबाइल ऐप या वेब खाते के माध्यम से की गई किसी भी कार्रवाई को आपके द्वारा अधिकृत माना जाता है।",
+            "पंजीकरण कंपनी के विवेकाधिकार पर है, और हम बिना कारण बताए किसी भी आवेदन को अस्वीकार करने का अधिकार सुरक्षित रखते हैं।"
           ]
         },
         {
-          title: "3. सेवाओं का दायरा",
+          title: "3. उपयोगकर्ता दायित्व और आचार संहिता",
           paragraphs: [
-            "Paisa Milega एक डिजिटल रेफरल और वितरण नेटवर्क के रूप में काम करता है। प्लेटफ़ॉर्म के माध्यम से, भागीदार संभावित ग्राहकों के साथ रिटेल वित्तीय उत्पादों (जैसे क्रेडिट कार्ड, व्यक्तिगत ऋण, व्यावसायिक ऋण, बचत खाते, डीमैट खाते और निवेश उत्पाद) के लिए अद्वितीय लीड जनरेशन लिंक साझा कर सकते हैं। एक बार जब कोई ग्राहक आपके रेफ़रल लिंक के माध्यम से सफलतापूर्वक वित्तीय उत्पाद प्राप्त कर लेता है, तो आप हमारे सक्रिय कमीशन कमीशन के आधार पर भुगतान के पात्र हो जाते हैं।"
-          ]
-        },
-        {
-          title: "4. कमीशन और भुगतान की शर्तें",
-          paragraphs: [],
-          bullets: [
-            "कमिशन की गणना सफल उत्पाद रूपांतरणों के आधार पर की जाती है, जो सीधे हमारे सहयोगी बैंकिंग और ऋण संस्थानों द्वारा सत्यापित की जाती है।",
-            "सभी भुगतान आपके पंजीकृत और सत्यापित बैंक खाते में इलेक्ट्रॉनिक रूप से संसाधित और भेजे जाते हैं।",
-            "आयकर विभाग के दिशानिर्देशों के अनुपालन में प्रचलित दरों पर स्रोत पर कर कटौती (TDS) की जाएगी।",
-            "यदि आपके खाते के माध्यम से कोई धोखाधड़ी गतिविधि, स्पैमिंग, नकली दस्तावेज़ जमा करना, या ग्राहक गलत बयानी का पता चलता है, तो हम भुगतान रोकने, फ्रीज करने या रद्द करने का अधिकार सुरक्षित रखते हैं।"
-          ]
-        },
-        {
-          title: "5. आचार संहिता और उपयोग के नियम",
-          paragraphs: [
-            "वेबसाइट और मोबाइल ऐप का उपयोग करने वाले भागीदारों को निम्नलिखित नियमों का कड़ाई से पालन करना चाहिए:"
+            "एक पार्टनर के रूप में, आप पेशेवर आचरण के उच्चतम मानकों का पालन करने के लिए सहमत हैं:"
           ],
           bullets: [
-            "रेफ़रल लिंक या परामर्श सेवाओं के लिए ग्राहकों से सीधे शुल्क न लें। पैसा मिलेगा सेवाएं अंतिम ग्राहकों के लिए पूरी तरह से मुफ्त हैं।",
-            "ऋण सुविधाओं, क्रेडिट कार्ड सुविधाओं, ब्याज दरों या पात्रता दिशानिर्देशों को गलत तरीके से पेश न करें।",
-            "झूठे ग्राहक विवरण जमा न करें या बैंक दस्तावेज़ों में हेरफेर न करें।",
-            "स्पैम तकनीकों (जैसे अवांछित संदेश वितरण या बड़े पैमाने पर स्वचालित पोस्टिंग) का उपयोग करके रेफ़रल लिंक वितरित न करें।"
+            "कोई सेवा शुल्क नहीं: आप रेफरल सेवाओं के लिए ग्राहकों से सीधे कोई शुल्क या कमीशन नहीं लेंगे। हमारी सेवाएं अंतिम ग्राहकों के लिए मुफ्त हैं।",
+            "सटीक प्रतिनिधित्व: आपको किसी भी वित्तीय उत्पाद की ऋण सुविधाओं, ब्याज दरों, पात्रता मानदंडों या छिपे हुए शुल्कों को गलत तरीके से पेश नहीं करना चाहिए।",
+            "डेटा गोपनीयता: प्लेटफ़ॉर्म पर ग्राहकों का डेटा एकत्र करने या सबमिट करने से पहले आपको उनसे स्पष्ट सहमति प्राप्त करनी होगी।",
+            "प्रतिबंधित कार्य: आप 'स्पैमिंग' में शामिल नहीं होंगे, स्वचालित स्क्रिप्ट का उपयोग नहीं करेंगे, या प्लेटफ़ॉर्म के किसी भी हिस्से को रिवर्स-इंजीनियर करने का प्रयास नहीं करेंगे।",
+            "ब्रांड का उपयोग: आप अनधिकृत मार्केटिंग के लिए 'Paisa Milega' नाम या लोगो का उपयोग नहीं करेंगे, जिसमें सोशल मीडिया हैंडल या वेबसाइट बनाना शामिल है जो लीड जनरेशन से परे आधिकारिक साझेदारी का संकेत देते हैं।"
           ]
         },
         {
-          title: "6. मध्यस्थ स्थिति और दायित्व की सीमा",
+          title: "4. बौद्धिक संपदा अधिकार (Intellectual Property)",
           paragraphs: [
-            "Credlawn India Private Limited विशुद्ध रूप से एक मध्यस्थ रेफरल सेवा के रूप में कार्य करता है। क्रेडिट कार्ड, ऋण या खातों की अंतिम मंजूरी, हामीदारी और जारी करना हमारे सहयोगी बैंकों और ऋण देने वाले संस्थानों के विवेकाधिकार पर है। हम संबंधित बैंकिंग भागीदारों द्वारा किसी भी ग्राहक अस्वीकृति, क्रेडिट देरी, या ऋण नीतियों में बदलाव के लिए उत्तरदायी नहीं हैं।"
+            "प्लेटफ़ॉर्म पर सभी सामग्री, लोगो, ट्रेडमार्क, ग्राफिक्स, UI/UX डिज़ाइन, कोड और मालिकाना एल्गोरिदम Credlawn India Private Limited की विशेष संपत्ति हैं। आपको हमारे द्वारा अधिकृत वित्तीय उत्पाद वितरण के उद्देश्य से प्लेटफ़ॉर्म का उपयोग करने के लिए एक सीमित, गैर-अनन्य, प्रतिसंहरणीय और गैर-हस्तांतरणीय लाइसेंस दिया जाता है। कोई भी अनधिकृत पुनरुत्पादन या वितरण सख्त वर्जित है और कानूनी कार्रवाई का कारण बन सकता है।"
           ]
         },
         {
-          title: "7. संशोधन, अद्यतन और समाप्ति",
+          title: "5. कमीशन, भुगतान और क्लॉबैक (Clawback)",
           paragraphs: [
-            "हम किसी भी समय प्लेटफ़ॉर्म सुविधाओं, लेआउट, सेवा की शर्तों, या कमीशन भुगतान दरों को संशोधित करने का अधिकार सुरक्षित रखते हैं। अपडेट के बाद वेबसाइट या मोबाइल ऐप का निरंतर उपयोग संशोधित शर्तों की स्वीकृति को इंगित करता है। हम अपनी आचार संहिता के उल्लंघन के लिए बिना किसी सूचना के आपके खाते को निलंबित या समाप्त करने का पूर्ण अधिकार सुरक्षित रखते हैं।"
+            "कमाई और भुगतान निम्नलिखित नियमों द्वारा शासित होते हैं:"
+          ],
+          bullets: [
+              "सत्यापन: कमीशन केवल हमारे सहयोगी बैंकिंग/वित्तीय संस्थानों द्वारा सफल रूपांतरण और सत्यापन के बाद ही क्रेडिट किया जाता है।",
+              "परिवर्तनशील भुगतान: कंपनी के पास बिना किसी पूर्व सूचना के किसी भी समय अपने पूर्ण विवेकाधिकार पर भुगतान संरचना, कमीशन दरों और प्रोत्साहन योजनाओं को संशोधित करने, अपडेट करने या बदलने का अधिकार सुरक्षित है।",
+              "टीडीएस और कर: भारत के आयकर अधिनियम के अनुसार स्रोत पर कर कटौती (TDS) के अधीन हैं।",
+            "क्लॉबैक नीति: यदि पार्टनर बैंक बाद में लीड को धोखाधड़ी के रूप में पहचानता है या यदि ग्राहक एक निश्चित अवधि के भीतर उत्पाद रद्द कर देता है, तो हम पहले से भुगतान किए गए कमीशन को 'क्लॉबैक' करने या काटने का अधिकार सुरक्षित रखते हैं।",
+            "जुर्माना वसूली (Penalty Recovery): यदि आपकी अनुचित गतिविधियों, जाली दस्तावेज जमा करने, या उनके ऋण दिशानिर्देशों के उल्लंघन के कारण कोई बैंक, NBFC या लेंडिंग पार्टनर कंपनी पर कोई जुर्माना या पेनल्टी लगाता है, तो हम आपकी वर्तमान या भविष्य की कमाई से समतुल्य जुर्माना राशि काटने या वसूलने का अधिकार सुरक्षित रखते हैं।",
+            "वॉलेट समाप्ति: 180 दिनों से अधिक समय तक बैंक खाते में स्थानांतरित नहीं की गई कमाई कंपनी के विवेकाधिकार पर समाप्त या जब्त की जा सकती है।"
           ]
         },
         {
-          title: "8. संपर्क करें",
+          title: "6. गोपनीयता (Confidentiality)",
           paragraphs: [
-            "इन शर्तों के संबंध में प्रश्नों के लिए, या यदि आपको वेबसाइट या मोबाइल ऐप के लिए सहायता की आवश्यकता है, तो कृपया support@paisamilega.in पर संपर्क करें।"
+            "आपको लीड डेटा, भुगतान संरचनाओं और आंतरिक रणनीतियों सहित गोपनीय जानकारी तक पहुंच प्राप्त हो सकती है। आप सख्त गोपनीयता बनाए रखने और ऐसी जानकारी किसी भी तीसरे पक्ष को प्रकट नहीं करने के लिए सहमत हैं। यह दायित्व प्लेटफ़ॉर्म के साथ आपकी साझेदारी समाप्त होने के बाद भी बना रहता है।"
+          ]
+        },
+        {
+          title: "7. दायित्व की सीमा और क्षतिपूर्ति",
+          paragraphs: [
+            "सीमा: प्लेटफ़ॉर्म 'जैसा है' और 'जैसा उपलब्ध है' के आधार पर प्रदान किया जाता है। Credlawn India Private Limited आपके प्लेटफ़ॉर्म के उपयोग के परिणामस्वरूप होने वाले किसी भी अप्रत्यक्ष, आकस्मिक या परिणामी नुकसान, जिसमें लाभ या डेटा की हानि शामिल है, के लिए उत्तरदायी नहीं होगा।",
+            "क्षतिपूर्ति: आप कंपनी और उसके निदेशकों को इन शर्तों के उल्लंघन, लापरवाही, या ग्राहकों के प्रति गलत बयानी से उत्पन्न होने वाले किसी भी दावे, नुकसान, कानूनी शुल्क या क्षति से सुरक्षित रखने और क्षतिपूर्ति करने के लिए सहमत हैं।"
+          ]
+        },
+        {
+          title: "8. समाप्ति और निलंबन",
+          paragraphs: [
+            "हम बिना किसी सूचना के आपके खाते को तुरंत निलंबित या समाप्त करने का अधिकार सुरक्षित रखते हैं, यदि:",
+            "क) आप इन शर्तों के किसी भी प्रावधान का उल्लंघन करते हैं।",
+            "ख) आप धोखाधड़ी की गतिविधियों में शामिल होते हैं या जाली दस्तावेज जमा करते हैं।",
+            "ग) आपके कार्यों को कंपनी की प्रतिष्ठा के लिए हानिकारक माना जाता है।",
+            "समाप्ति पर, प्लेटफ़ॉर्म का उपयोग करने का आपका अधिकार समाप्त हो जाता है, और किसी भी लंबित कमीशन को फ्रीज या जब्त किया जा सकता है।"
+          ]
+        },
+        {
+          title: "9. शासी कानून और विवाद समाधान",
+          paragraphs: [
+            "ये शर्तें भारत के कानूनों के अनुसार शासित और समझी जाएंगी। इन शर्तों से उत्पन्न या उनके संबंध में होने वाले किसी भी विवाद को भोपाल, मध्य प्रदेश में स्थित न्यायालयों के विशेष अधिकार क्षेत्र के अधीन किया जाएगा।"
+          ]
+        },
+        {
+          title: "11. पक्षों का संबंध (Relationship of Parties)",
+          paragraphs: [
+            "Credlawn India Private Limited के साथ आपका संबंध एक स्वतंत्र ठेकेदार (Independent Contractor) का है। इन शर्तों में से किसी भी बात का अर्थ साझेदारी, संयुक्त उद्यम, नियोक्ता-कर्मचारी, या एजेंसी संबंध बनाना नहीं माना जाएगा। आपके पास कंपनी को किसी भी दायित्व के लिए बाध्य करने या खुद को आधिकारिक एजेंट या कर्मचारी के रूप में प्रस्तुत करने का कोई अधिकार नहीं है।"
+          ]
+        },
+        {
+          title: "12. संचार सहमति (Communication Consent)",
+          paragraphs: [
+            "प्लेटफ़ॉर्म पर पंजीकरण करके, आप खाता सत्यापन, लीड अपडेट, प्रशिक्षण सामग्री और प्रचार ऑफ़र के उद्देश्यों के लिए फोन कॉल, एसएमएस, आरसीएस (RCS), व्हाट्सएप और ईमेल के माध्यम से कंपनी द्वारा संपर्क किए जाने के लिए अपनी स्पष्ट सहमति प्रदान करते हैं। यह सहमति नेशनल डू नॉट कॉल (DNC) रजिस्ट्री पर किसी भी पंजीकरण से ऊपर मानी जाएगी।"
+          ]
+        },
+        {
+          title: "13. समझौते में संशोधन",
+          paragraphs: [
+            "कंपनी के पास किसी भी समय इन सेवा की शर्तों को संशोधित करने, संशोधित करने या अपडेट करने का अधिकार सुरक्षित है। कोई भी परिवर्तन प्लेटफ़ॉर्म पर पोस्ट करने के तुरंत बाद प्रभावी होगा। ऐसे परिवर्तनों के बाद प्लेटफ़ॉर्म का आपका निरंतर उपयोग संशोधित शर्तों की आपकी स्वीकृति माना जाएगा।"
+          ]
+        },
+        {
+          title: "14. हमसे संपर्क करें",
+          paragraphs: [
+            "इन शर्तों के संबंध में प्रश्नों के लिए या यदि आपको सहायता की आवश्यकता है, तो कृपया support@paisamilega.in पर हमसे संपर्क करें।"
           ]
         }
       ]
@@ -507,7 +595,7 @@ export const translations: Record<Language, TranslationDict> = {
           paragraphs: [
             "सूचना प्रौद्योगिकी अधिनियम, 2000 और उसके तहत बनाए गए नियमों के अनुसार, हमारे शिकायत अधिकारी का नाम और संपर्क विवरण नीचे प्रदान किया गया है। हम शिकायत, विवाद या डेटा समस्याओं का समाधान प्राप्ति के 15 दिनों के भीतर करेंगे:",
             "नाम: शिकायत अधिकारी, Credlawn India Private Limited",
-            "पता: प्रथम तल, प्लॉट नंबर-22, जोन-2, एम.पी. नगर, भोपाल, मध्य प्रदेश - 462001, भारत",
+            "पता: प्रथम तल, प्लॉट नंबर-22, जोन-2, एम.पी. नगर, भोपाल, मध्य प्रदेश - 462011, भारत",
             "ईमेल: support@paisamilega.in"
           ]
         }
