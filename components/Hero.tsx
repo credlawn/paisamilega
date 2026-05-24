@@ -63,7 +63,7 @@ export default function Hero() {
             </p>
 
             {/* Lead Acquisition Form */}
-            <div className="mt-8 w-full max-w-md">
+            <div id="register" className="mt-8 w-full max-w-md">
               <form onSubmit={handleSubmit} className="relative flex flex-col sm:flex-row gap-2.5 sm:gap-0 rounded-2xl sm:rounded-full bg-transparent sm:bg-white p-0 sm:p-1.5 border-0 sm:border border-stone-200/80 sm:shadow-[0_2px_12px_rgba(15,23,42,0.02)] focus-within:border-brand-green/45 transition-colors duration-200">
                 <div className="flex items-center w-full bg-white rounded-full border border-stone-200/80 sm:border-0 p-1.5 sm:p-0">
                   <div className="flex items-center pl-3 text-stone-400 text-sm font-medium border-r border-stone-100 pr-2">
@@ -77,7 +77,7 @@ export default function Hero() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
                     placeholder="Enter 10-digit mobile number"
-                    className="w-full bg-transparent px-3 py-2 text-sm font-semibold text-slate-900 outline-none placeholder-slate-400 min-w-0"
+                    className="w-full bg-transparent px-3 py-2 text-sm font-semibold text-slate-900 outline-none placeholder-slate-500 min-w-0"
                   />
                 </div>
                 <button
@@ -96,7 +96,7 @@ export default function Hero() {
               )}
 
               {/* Trust Badge */}
-              <p className="mt-3.5 text-[11px] font-semibold text-slate-600 flex items-center gap-1.5">
+              <p className="mt-3.5 text-[11px] font-semibold text-slate-700 flex items-center gap-1.5">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-brand-green">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                 </svg>

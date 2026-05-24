@@ -22,16 +22,16 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#products" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#products" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               Financial Products
             </Link>
-            <Link href="#academy" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#academy" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               Academy & Training
             </Link>
-            <Link href="#benefits" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#benefits" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               Partner Benefits
             </Link>
-            <Link href="#about" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+            <Link href="/#about" className="text-[13px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
               About Us
             </Link>
           </nav>
@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Action Buttons */}
           <div className="flex items-center gap-3">
             <Link 
-              href="#register" 
+              href="/#register" 
               className="hidden md:inline-flex rounded-full bg-brand-green px-4 py-2 text-[12px] font-semibold text-white transition-all hover:bg-brand-green-dark hover:shadow-[0_4px_12px_rgba(0,130,72,0.15)] active:scale-95"
             >
               Become a Partner
