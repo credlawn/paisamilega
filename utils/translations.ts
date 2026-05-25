@@ -183,6 +183,38 @@ export interface TranslationDict {
       desc: string;
     };
     };
+    seo: {
+    home: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    saathi: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    about: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    dataPolicy: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    terms: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    privacy: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+    };
     }export const translations: Record<Language, TranslationDict> = {
   en: {
     nav: {
@@ -671,6 +703,38 @@ export interface TranslationDict {
       lifeAt: {
         title: "Life at Paisa Milega",
         desc: "A glimpse into our vibrant culture, team celebrations, and the passion that drives us every day.",
+      },
+    },
+    seo: {
+      home: {
+        title: "Paisa Milega | Best Earning App in India for Financial Saathis",
+        description: "Join Paisa Milega, India's most trusted fintech partner network. Refer Credit Cards, Loans, and Demat accounts to earn up to ₹1,00,000* monthly with zero investment.",
+        keywords: "best earning app 2026, zero investment business, credit card agent app, loan dsa registration, financial affiliate program India, refer and earn money, Paisa Milega partner",
+      },
+      saathi: {
+        title: "Become a Saathi | Earn Money with Zero Investment | Paisa Milega",
+        description: "Transform your network into income. Join as a Paisa Milega Saathi and sell 100+ banking products. Perfect for students, housewives, and shop owners in Tier 2/3 cities.",
+        keywords: "paisa milega saathi, work from home jobs India, extra side income, digital financial advisor, become a credit card agent, earn commission on loans",
+      },
+      about: {
+        title: "About Us | Leading Financial Inclusion in Bharat | Paisa Milega",
+        description: "Established in 2020, Paisa Milega is building a bridge between big banks and every Indian household. Based in Bhopal with 100+ experts empowering 1,000+ Saathis.",
+        keywords: "about paisa milega, bhopal fintech startup, digital financial revolution Bharat, financial inclusion India, credlawn india private limited",
+      },
+      dataPolicy: {
+        title: "Data Policy | Secure & Transparent Data Storage | Paisa Milega",
+        description: "Learn how Paisa Milega protects your information. RBI compliant data storage on Indian servers with high-level AES-256 encryption.",
+        keywords: "data policy, rbi digital lending guidelines, data security fintech, secure data storage india",
+      },
+      terms: {
+        title: "Terms of Service | Legal Agreement | Paisa Milega",
+        description: "Read the Terms of Service for using the Paisa Milega platform. Rules for Saathis, commission payouts, and governing law in Bhopal.",
+        keywords: "terms of service, legal terms, partner agreement, fintech regulations india",
+      },
+      privacy: {
+        title: "Privacy Policy | Your Privacy is Our Priority | Paisa Milega",
+        description: "Paisa Milega is committed to protecting your personal information. Read our detailed privacy policy to understand how we handle your data.",
+        keywords: "privacy policy, personal data protection, kyc data security, fintech privacy",
       },
     },
   },
@@ -1174,6 +1238,38 @@ export interface TranslationDict {
         title: "Paisa Milega की झलकियां",
         desc: "हमारी टीम के साथ बिताए कुछ बेहतरीन पल, ऑफिस का कल्चर और वो जुनून जो हमें रोज कुछ नया करने की प्रेरणा देता है।",
       },
-    },
-  }
-};
+      },
+      seo: {
+      home: {
+        title: "Paisa Milega | भारत का बेस्ट अर्निंग ऐप और फाइनेंशियल साथी नेटवर्क",
+        description: "Paisa Milega से जुड़ें और भारत के सबसे भरोसेमंद फिनटेक नेटवर्क का हिस्सा बनें। क्रेडिट कार्ड और लोन रेफर करें और बिना किसी निवेश के हर महीने ₹1,00,000* तक कमाएं।",
+        keywords: "ghar baithe paise kamaye, bina investment ke business, sabse zyada commission dene wala app, credit card agent kaise bane, loan dsa partner India, refer and earn money app",
+      },
+      saathi: {
+        title: "साथी बनें | ज़ीरो इन्वेस्टमेंट में पैसे कमाएं | Paisa Milega",
+        description: "अपने नेटवर्क को कमाई में बदलें। Paisa Milega साथी बनें और 100+ बैंकिंग प्रोडक्ट्स बेचें। छात्रों, गृहिणियों और छोटे दुकानदारों के लिए बेस्ट साइड इनकम का तरीका।",
+        keywords: "paisa milega saathi, work from home jobs in hindi, extra income kaise kare, digital financial advisor india, loan agent commission",
+      },
+      about: {
+        title: "हमारे बारे में | भारत में वित्तीय क्रांति का नेतृत्व | Paisa Milega",
+        description: "2020 में स्थापित, Paisa Milega बड़े बैंकों और हर भारतीय घर के बीच एक सेतु बना रहा है। भोपाल हेडक्वार्टर से 100+ एक्सपर्ट्स 1,000+ साथियों को सशक्त बना रहे हैं।",
+        keywords: "about paisa milega hindi, bhopal based fintech, digital financial inclusion bharat, sahi salah app",
+      },
+      dataPolicy: {
+        title: "डेटा पॉलिसी | सुरक्षित और पारदर्शी डेटा स्टोरेज | Paisa Milega",
+        description: "जानें कि Paisa Milega आपकी जानकारी की सुरक्षा कैसे करता है। भारतीय सर्वर पर RBI नियमों के अनुसार सुरक्षित डेटा स्टोरेज और हाई-लेवल एन्क्रिप्शन।",
+        keywords: "data policy hindi, rbi compliance fintech, data security bharat",
+      },
+      terms: {
+        title: "सेवा की शर्तें | कानूनी समझौता | Paisa Milega",
+        description: "Paisa Milega प्लेटफॉर्म का उपयोग करने के लिए सेवा की शर्तें पढ़ें। साथियों के लिए नियम, कमीशन भुगतान और भोपाल क्षेत्राधिकार की जानकारी।",
+        keywords: "terms of service hindi, partner agreement, fintech regulations india",
+      },
+      privacy: {
+        title: "गोपनीयता नीति | आपकी प्राइवेसी हमारी प्राथमिकता | Paisa Milega",
+        description: "Paisa Milega आपकी निजी जानकारी की सुरक्षा के लिए प्रतिबद्ध है। हमारी विस्तृत प्राइवेसी पॉलिसी पढ़ें और समझें कि हम आपका डेटा कैसे संभालते हैं।",
+        keywords: "privacy policy hindi, personal data protection, kyc security",
+      },
+      },
+      },
+      };
