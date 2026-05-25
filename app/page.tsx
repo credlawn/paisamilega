@@ -2,9 +2,9 @@ import React from "react";
 import HomePage from "@/components/pages/HomePage";
 
 export const metadata = {
-  title: "Paisa Milega | Best Earning App in India for Financial Saathis",
-  description: "Join Paisa Milega, India's most trusted fintech partner network. Refer Credit Cards, Loans, and Demat accounts to earn up to ₹1,00,000* monthly with zero investment.",
-  keywords: "best earning app 2026, zero investment business, credit card agent app, loan dsa registration, financial affiliate program India, refer and earn money, Paisa Milega partner",
+  title: "Paisa Milega | Earn Money from Home with Zero Investment",
+  description: "Start your side business with Paisa Milega. Share credit card & loan offers with your network and earn high commissions sent directly to your bank account.",
+  keywords: "earn money from home, online earning app, zero investment business, refer and earn, mobile se paise kaise kamaye, student pocket money app, work from home jobs",
 };
 
 export default function Home() {
