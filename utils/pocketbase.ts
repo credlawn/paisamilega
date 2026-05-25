@@ -2,7 +2,7 @@ const PB_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL || 'http://127.0.0.1:8090'
 
 export async function getTestimonials() {
   try {
-    const res = await fetch(`${PB_URL}/api/collections/pb_testimonials/records?filter=(is_featured=true)`, {
+    const res = await fetch(`${PB_URL}/api/collections/pm_testimonials/records?filter=(is_featured=true)`, {
       next: { revalidate: 3600 }, // Refresh every hour (ISR)
     });
     const data = await res.json();

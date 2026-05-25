@@ -3,12 +3,14 @@
 import React, { useState } from "react";
 import { useLanguage } from "@/components/LanguageContext";
 import Link from "next/link";
+import SaathiRegistrationModal from "@/components/SaathiRegistrationModal";
 
 export default function IncomeCalculator() {
   const { t, language } = useLanguage();
   const [ccCount, setCcCount] = useState(6);
   const [loanCount, setLoanCount] = useState(3);
   const [accCount, setAccCount] = useState(2);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const langPrefix = language === "hi" ? "/hi" : "";
 
@@ -174,17 +176,22 @@ export default function IncomeCalculator() {
               </div>
 
               <div className="relative z-10">
-                <Link 
-                  href={`${langPrefix}/#register`}
-                  className="block w-full text-center rounded-full bg-brand-green py-4 text-[14px] font-bold text-white shadow-lg shadow-brand-green/20 hover:bg-brand-green-dark hover:scale-[1.02] active:scale-[0.98] transition-all"
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="block w-full text-center rounded-full bg-brand-green py-4 text-[14px] font-bold text-white shadow-lg shadow-brand-green/20 hover:bg-brand-green-dark hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
                 >
                   {t.calculator.cta}
-                </Link>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <SaathiRegistrationModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 }
