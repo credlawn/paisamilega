@@ -131,7 +131,7 @@ export default function Navbar() {
 
             {/* Navigation Links (Desktop) */}
             <nav className="hidden md:flex items-center gap-8">
-              <Link href={`${langPrefix}/#products`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+              <Link href={`${langPrefix}/?sec=products`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
                 {t.nav.products}
               </Link>
               <Link href={`${langPrefix}/blogs`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
@@ -224,7 +224,7 @@ export default function Navbar() {
           <nav className="flex-1 px-4 py-6 overflow-y-auto">
             <div className="flex flex-col gap-2">
               <Link 
-                href={`${langPrefix}/#products`} 
+                href={`${langPrefix}/?sec=products`} 
                 onClick={closeSidebar}
                 className="flex items-center gap-4 px-4 py-3.5 rounded-xl text-[15px] font-bold text-slate-700 hover:bg-slate-50 hover:text-brand-green transition-all group"
               >

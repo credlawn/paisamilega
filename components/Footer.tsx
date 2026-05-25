@@ -53,22 +53,22 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-2.5">
                 <li>
-                  <Link href={`${langPrefix}/#products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
+                  <Link href={`${langPrefix}/?sec=products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
                     {t.products.list[0].title}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${langPrefix}/#products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
+                  <Link href={`${langPrefix}/?sec=products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
                     {t.products.list[1].title}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${langPrefix}/#products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
+                  <Link href={`${langPrefix}/?sec=products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
                     {t.products.list[2].title}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`${langPrefix}/#products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
+                  <Link href={`${langPrefix}/?sec=products`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
                     {t.products.list[4].title}
                   </Link>
                 </li>
