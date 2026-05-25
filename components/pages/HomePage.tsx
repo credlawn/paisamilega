@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Products from "@/components/Products";
 import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
+import BlogSection from "@/components/BlogSection";
 import TechSupport from "@/components/TechSupport";
 import Footer from "@/components/Footer";
 
@@ -18,6 +20,8 @@ export default function HomePage() {
         <Features />
         <Products />
         <HowItWorks />
+        <Testimonials />
+        <BlogSection />
         <TechSupport />
       </main>
       <Footer />

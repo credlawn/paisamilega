@@ -46,7 +46,7 @@ export default function Navbar() {
               <Link href={`${langPrefix}/#products`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
                 {t.nav.products}
               </Link>
-              <Link href={`${langPrefix}/#academy`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+              <Link href={`${langPrefix}/blogs`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
                 {t.nav.academy}
               </Link>
               <Link href={`${langPrefix}/saathi`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
@@ -151,12 +151,12 @@ export default function Navbar() {
               </Link>
 
               <Link 
-                href={`${langPrefix}/#academy`} 
+                href={`${langPrefix}/blogs`} 
                 onClick={closeSidebar}
                 className="flex items-center gap-4 px-4 py-3.5 rounded-xl text-[15px] font-bold text-slate-700 hover:bg-slate-50 hover:text-brand-green transition-all group"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                     <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
                   </svg>

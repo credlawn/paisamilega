@@ -10,6 +10,30 @@ export default function AboutPage() {
   const { t, language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  // Helper to render Paisa Milega with brand colors
+  const renderBrandedText = (text: string) => {
+    if (!text) return "";
+    const parts = text.split(/(paisa|milega|Paisa Milega)/i);
+    return parts.map((part, i) => {
+      const lower = part.toLowerCase();
+      if (lower === "paisa") {
+        return <span key={i} className="text-brand-green">paisa</span>;
+      }
+      if (lower === "milega") {
+        return <span key={i} className="text-brand-orange font-extrabold">milega</span>;
+      }
+      if (lower === "paisa milega") {
+        return (
+          <span key={i}>
+            <span className="text-brand-green">paisa</span>
+            <span className="text-brand-orange font-extrabold">milega</span>
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
   useEffect(() => {
     document.title = (language === "en" ? "About Us" : "हमारे बारे में") + " | Paisa Milega";
   }, [language]);
@@ -65,7 +89,7 @@ export default function AboutPage() {
                   {t.aboutPage.legacy.title}
                 </h2>
                 <p className="text-[15px] sm:text-[16px] text-slate-700 leading-relaxed font-medium">
-                  {t.aboutPage.legacy.content}
+                  {renderBrandedText(t.aboutPage.legacy.content)}
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -115,7 +139,7 @@ export default function AboutPage() {
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 font-sans">
-                  {t.aboutPage.team.title}
+                  {renderBrandedText(t.aboutPage.team.title)}
                 </h2>
                 <p className="text-[15px] sm:text-[16px] text-slate-700 leading-relaxed font-medium mb-8">
                   {t.aboutPage.team.content}
@@ -152,7 +176,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 sm:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4 font-sans tracking-tight">
-                {t.aboutPage.lifeAt.title}
+                {renderBrandedText(t.aboutPage.lifeAt.title)}
               </h2>
               <p className="text-[15px] sm:text-[17px] text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
                 {t.aboutPage.lifeAt.desc}
@@ -193,16 +217,14 @@ export default function AboutPage() {
                   {/* Overlay on Hover */}
                   <div className="absolute inset-0 bg-brand-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  {/* Type Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter shadow-sm border ${
-                      item.type === 'video' 
-                        ? 'bg-brand-orange text-white border-brand-orange/20' 
-                        : 'bg-white text-slate-900 border-stone-100'
-                    }`}>
-                      {item.type}
-                    </span>
-                  </div>
+                  {/* Type Badge - Only for Video */}
+                  {item.type === 'video' && (
+                    <div className="absolute top-4 right-4 z-10">
+                      <span className="px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter shadow-sm border bg-brand-orange text-white border-brand-orange/20">
+                        {item.type}
+                      </span>
+                    </div>
+                  )}
 
                   {/* Icon Overlay for Videos */}
                   {item.type === 'video' && (
