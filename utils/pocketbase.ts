@@ -39,6 +39,19 @@ export async function getBlogBySlug(slug: string) {
   }
 }
 
+export async function getPartners() {
+  try {
+    const res = await fetch(`${PB_URL}/api/collections/pm_partners/records?filter=(status=true)`, {
+      next: { revalidate: 3600 },
+    });
+    const data = await res.json();
+    return data.items || [];
+  } catch (error) {
+    console.error("Error fetching partners:", error);
+    return [];
+  }
+}
+
 export function getFileURL(collectionId: string, recordId: string, fileName: string) {
   if (!fileName) return "";
   return `${PB_URL}/api/files/${collectionId}/${recordId}/${fileName}`;

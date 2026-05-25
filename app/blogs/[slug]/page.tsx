@@ -2,6 +2,10 @@ import BlogDetailPage from "@/components/pages/BlogDetailPage";
 import { getBlogs, getBlogBySlug, getFileURL } from "@/utils/pocketbase";
 import type { Metadata } from "next";
 
+interface BlogItem {
+  slug: string;
+}
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -9,7 +13,7 @@ type Props = {
 // 1. Generate static paths for blogs during build (SSG)
 export async function generateStaticParams() {
   const blogs = await getBlogs();
-  return blogs.map((blog: any) => ({
+  return blogs.map((blog: BlogItem) => ({
     slug: blog.slug,
   }));
 }
