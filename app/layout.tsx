@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-
 import { LanguageProvider } from "@/components/LanguageContext";
+import Script from "next/script";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -29,6 +29,23 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
         </LanguageProvider>
+
+        {/* Global Analytics Script */}
+        <Script
+          src="https://dev.cipl.me/script.js"
+          data-website-id="b4886d8b-b0bc-4179-8131-332379e2a8fd"
+          strategy="afterInteractive"
+        />
+
+        {/* Session Recorder Script */}
+        <Script
+          src="https://dev.cipl.me/recorder.js"
+          data-website-id="b4886d8b-b0bc-4179-8131-332379e2a8fd"
+          data-sample-rate="0.15"
+          data-mask-level="moderate"
+          data-max-duration="300000"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

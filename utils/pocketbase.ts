@@ -56,3 +56,29 @@ export function getFileURL(collectionId: string, recordId: string, fileName: str
   if (!fileName) return "";
   return `${PB_URL}/api/files/${collectionId}/${recordId}/${fileName}`;
 }
+
+export interface FAQItem {
+  id: string;
+  collectionId: string;
+  question_en: string;
+  answer_en: string;
+  question_hi: string;
+  answer_hi: string;
+  display_code: number;
+  sort_order: number;
+  status: boolean;
+}
+
+export async function getFAQs(displayCode: number): Promise<FAQItem[]> {
+  try {
+    const res = await fetch(`${PB_URL}/api/collections/pm_faq/records?filter=(status=true%26%26display_code=${displayCode})&sort=sort_order`, {
+      next: { revalidate: 3600 }, // Refresh every hour (ISR)
+    });
+    const data = await res.json();
+    return data.items || [];
+  } catch (error) {
+    console.error("Error fetching FAQs:", error);
+    return [];
+  }
+}
+

@@ -13,8 +13,13 @@ import FAQSection from "@/components/FAQSection";
 import BlogSection from "@/components/BlogSection";
 import TechSupport from "@/components/TechSupport";
 import Footer from "@/components/Footer";
+import { FAQItem } from "@/utils/pocketbase";
 
-export default function HomePage() {
+interface HomePageProps {
+  initialFaqs?: FAQItem[];
+}
+
+export default function HomePage({ initialFaqs }: HomePageProps) {
   return (
     <div className="flex flex-col min-h-screen bg-[#fafaf9]">
       <Navbar />
@@ -26,9 +31,9 @@ export default function HomePage() {
         <IncomeCalculator />
         <HowItWorks />
         <Testimonials />
-        <FAQSection />
         <BlogSection />
         <TechSupport />
+        <FAQSection faqs={initialFaqs} />
       </main>
       <Footer />
     </div>

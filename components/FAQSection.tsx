@@ -2,14 +2,27 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/components/LanguageContext";
+import { FAQItem } from "@/utils/pocketbase";
 
-export default function FAQSection() {
+interface FAQSectionProps {
+  faqs?: FAQItem[];
+}
+
+export default function FAQSection({ faqs }: FAQSectionProps) {
   const { t, language } = useLanguage();
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   const toggleAccordion = (idx: number) => {
     setOpenIdx(openIdx === idx ? null : idx);
   };
+
+  // Map PocketBase FAQs to standard { q, a } schema
+  const displayQuestions = (faqs || []).map(item => ({
+    q: language === "hi" ? (item.question_hi || item.question_en) : (item.question_en || item.question_hi),
+    a: language === "hi" ? (item.answer_hi || item.answer_en) : (item.answer_en || item.answer_hi),
+  }));
+
+  if (displayQuestions.length === 0) return null;
 
   return (
     <section className="bg-[#fafaf9] py-16 sm:py-24 border-b border-stone-100 relative overflow-hidden">
@@ -37,7 +50,7 @@ export default function FAQSection() {
 
         {/* Accordion List */}
         <div className="flex flex-col gap-4">
-          {t.faq.questions.map((item, idx) => {
+          {displayQuestions.map((item, idx) => {
             const isOpen = openIdx === idx;
 
             return (
@@ -62,12 +75,13 @@ export default function FAQSection() {
                 {/* Animated content wrapper */}
                 <div 
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    isOpen ? "max-h-[250px] opacity-100 border-t border-stone-100" : "max-h-0 opacity-0"
+                    isOpen ? "max-h-[500px] opacity-100 border-t border-stone-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="p-6 text-[14px] sm:text-[15px] leading-relaxed text-slate-600 font-medium bg-[#fafaf9]/30">
-                    {item.a}
-                  </p>
+                  <div 
+                    className="p-6 text-[14px] sm:text-[15px] leading-relaxed text-slate-600 font-medium bg-[#fafaf9]/30 [&_p]:mb-3 [&_p:last-child]:mb-0 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-3 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-3 [&_a]:text-brand-green [&_a]:underline [&_strong]:font-bold"
+                    dangerouslySetInnerHTML={{ __html: item.a }}
+                  />
                 </div>
               </div>
             );
