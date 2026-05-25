@@ -2,18 +2,38 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/components/LanguageContext";
+import { createSaathiLead } from "@/utils/pocketbase";
 
 export default function Hero() {
   const [phone, setPhone] = useState("");
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const { language, t } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (phone.length === 10) {
-      setSuccess(true);
-      setTimeout(() => setSuccess(false), 5000);
-      setPhone("");
+      setLoading(true);
+      setError("");
+      try {
+        await createSaathiLead({
+          mobile_no: Number(phone),
+        });
+        setSuccess(true);
+        setTimeout(() => setSuccess(false), 6000);
+        setPhone("");
+      } catch (err) {
+        console.error(err);
+        setError(
+          language === "hi" 
+            ? "कुछ गलत हुआ। कृपया दोबारा प्रयास करें।" 
+            : "Something went wrong. Please try again."
+        );
+        setTimeout(() => setError(""), 5000);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
@@ -104,16 +124,41 @@ export default function Hero() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto shrink-0 rounded-full bg-brand-green px-5 py-3 sm:py-2.5 text-[13px] sm:text-[12px] font-bold text-white hover:bg-brand-green-dark transition-colors hover:shadow-[0_4px_12px_rgba(0,130,72,0.15)] active:scale-95 duration-100 cursor-pointer"
+                  disabled={loading}
+                  className="w-full sm:w-auto shrink-0 rounded-full bg-brand-green px-5 py-3 sm:py-2.5 text-[13px] sm:text-[12px] font-bold text-white hover:bg-brand-green-dark transition-colors hover:shadow-[0_4px_12px_rgba(0,130,72,0.15)] active:scale-95 duration-100 cursor-pointer disabled:bg-stone-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  {t.hero.inputButton}
+                  {loading ? (
+                    <>
+                      <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      </svg>
+                      <span>{language === "hi" ? "भेज रहे हैं..." : "Sending..."}</span>
+                    </>
+                  ) : (
+                    t.hero.inputButton
+                  )}
                 </button>
               </form>
 
               {/* Feedback Message */}
               {success && (
-                <div className="mt-3 text-[12px] font-medium text-brand-green animate-fade-in">
-                  {t.hero.successMessage}
+                <div className="mt-3 text-[13px] font-bold text-brand-green bg-green-50/60 border border-green-100 p-3 rounded-xl animate-fade-in flex items-start gap-2">
+                  <svg className="h-4 w-4 text-brand-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>
+                    {language === "hi" 
+                      ? "धन्यवाद! हमारी टीम जल्द ही आपसे संपर्क करेगी।" 
+                      : "Thank you! Our team will contact you with details soon."}
+                  </span>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {error && (
+                <div className="mt-3 text-[12px] font-semibold text-red-600 bg-red-50/60 border border-red-100 p-3 rounded-xl animate-fade-in">
+                  {error}
                 </div>
               )}
 

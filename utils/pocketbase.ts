@@ -82,3 +82,37 @@ export async function getFAQs(displayCode: number): Promise<FAQItem[]> {
   }
 }
 
+export interface SaathiLead {
+  mobile_no: number;
+  customer_name?: string;
+  city?: string;
+  state?: string;
+  occupation?: string;
+}
+
+export async function createSaathiLead(lead: SaathiLead) {
+  try {
+    const res = await fetch(`${PB_URL}/api/collections/pm_saathi/records`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        mobile_no: lead.mobile_no,
+        customer_name: lead.customer_name || "",
+        city: lead.city || "",
+        state: lead.state || "",
+        occupation: lead.occupation || "",
+      }),
+    });
+    if (!res.ok) {
+      throw new Error(`Failed to save lead: ${res.statusText}`);
+    }
+    return await res.json();
+  } catch (error) {
+    console.error("Error saving Saathi lead:", error);
+    throw error;
+  }
+}
+
+
