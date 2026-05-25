@@ -82,7 +82,7 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-2.5">
                 <li>
-                  <Link href={`${langPrefix}/#about`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
+                  <Link href={`${langPrefix}/about`} className="text-[12px] text-slate-600 hover:text-slate-950 transition-colors font-sans font-semibold">
                     {t.footer.aboutUs}
                   </Link>
                 </li>

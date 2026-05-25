@@ -51,7 +51,7 @@ export default function Navbar() {
               </Link>
               <Link href={`${langPrefix}/saathi`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
                 {t.nav.benefits}
-              </Link>              <Link href={`${langPrefix}/#about`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
+              </Link>              <Link href={`${langPrefix}/about`} className="text-[14px] font-semibold text-slate-700 transition-colors hover:text-brand-green">
                 {t.nav.about}
               </Link>
             </nav>
@@ -178,12 +178,12 @@ export default function Navbar() {
               </Link>
 
               <Link 
-                href={`${langPrefix}/#about`} 
+                href={`${langPrefix}/about`} 
                 onClick={closeSidebar}
                 className="flex items-center gap-4 px-4 py-3.5 rounded-xl text-[15px] font-bold text-slate-700 hover:bg-slate-50 hover:text-brand-green transition-all group"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
                     <circle cx="12" cy="12" r="10" />
                     <line x1="12" y1="16" x2="12" y2="12" />
                     <line x1="12" y1="8" x2="12.01" y2="8" />

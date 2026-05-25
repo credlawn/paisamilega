@@ -152,8 +152,34 @@ export interface TranslationDict {
       }[];
     };
   };
-  }
-export const translations: Record<Language, TranslationDict> = {
+  aboutPage: {
+    hero: {
+      punchline: string;
+      hook: string;
+      subtext: string;
+    };
+    legacy: {
+      title: string;
+      content: string;
+    };
+    stats: {
+      label: string;
+      value: string;
+    }[];
+    team: {
+      title: string;
+      content: string;
+    };
+    mission: {
+      title: string;
+      content: string;
+    };
+    vision: {
+      title: string;
+      content: string;
+    };
+  };
+  }export const translations: Record<Language, TranslationDict> = {
   en: {
     nav: {
       products: "Financial Products",
@@ -171,7 +197,7 @@ export const translations: Record<Language, TranslationDict> = {
       inputPlaceholder: "Enter 10-digit mobile number",
       inputButton: "Start Earning",
       successMessage: "✓ App link sent to your mobile. Start your onboarding today!",
-      trustBadge: "Trusted by 10,000+ registered partners across India.",
+      trustBadge: "Trusted by 1,000+ registered partners across India.",
       appMockup: {
         congrats: "Congrats! You earned",
         earnedAmount: "₹30,000",
@@ -611,6 +637,34 @@ export const translations: Record<Language, TranslationDict> = {
         ],
       },
     },
+    aboutPage: {
+      hero: {
+        punchline: "Connecting Bharat to better Financial Choices.",
+        hook: "Building trust across India since 2020.",
+        subtext: "From our headquarters in Bhopal, we are leading the revolution of financial inclusion for every Indian household.",
+      },
+      legacy: {
+        title: "A Legacy of Trust",
+        content: "Since our inception in 2020, paisamilega has been a cornerstone of stability in the Indian fintech landscape. We've spent over six years perfecting our technology and building deep relationships with India's most respected banking institutions. Our journey is defined by the thousands of success stories of our Saathis who have transformed their lives through professional financial advisory.",
+      },
+      stats: [
+        { label: "Registered Saathis", value: "1,000+" },
+        { label: "Expert Team Members", value: "100+" },
+        { label: "Banking Partners", value: "100+" },
+      ],
+      team: {
+        title: "The Heart of Paisa Milega",
+        content: "With an in-house team of over 100 experts, we operate at scale to ensure every lead is tracked and every payout is seamless. Our technology, support, and operations teams work around the clock from our Bhopal office to empower our Saathi family across the nation. We believe in transparency, speed, and helping you grow every single day.",
+      },
+      mission: {
+        title: "Our Mission",
+        content: "To be the most trusted financial bridge for the next billion Indians, bringing professional financial services to every doorstep.",
+      },
+      vision: {
+        title: "Our Vision",
+        content: "Empowering every Indian with the knowledge and digital tools to become financially independent and grow their wealth.",
+      },
+    },
   },
   hi: {
     nav: {
@@ -629,7 +683,7 @@ export const translations: Record<Language, TranslationDict> = {
       inputPlaceholder: "10-अंकीय मोबाइल नंबर दर्ज करें",
       inputButton: "कमाई शुरू करें",
       successMessage: "✓ ऐप लिंक आपके मोबाइल पर भेज दिया गया है। आज ही अपनी ऑनबोर्डिंग शुरू करें!",
-      trustBadge: "भारत भर में 10,000+ पंजीकृत ग्राहकों द्वारा भरोसेमंद।",
+      trustBadge: "भारत भर में 1,000+ पंजीकृत ग्राहकों द्वारा भरोसेमंद।",
       appMockup: {
         congrats: "बधाई हो! आपने कमाए",
         earnedAmount: "₹30,000",
@@ -1079,6 +1133,34 @@ export const translations: Record<Language, TranslationDict> = {
             desc: "अपनी नियमित नौकरी के साथ अतिरिक्त साइड इनकम कमाएं।",
           },
         ],
+      },
+    },
+    aboutPage: {
+      hero: {
+        punchline: "भारत को बेहतर फाइनेंशियल विकल्पों से जोड़ना।",
+        hook: "2020 से पूरे भारत में भरोसे का प्रतीक।",
+        subtext: "भोपाल स्थित हमारे मुख्यालय से, हम हर भारतीय परिवार के लिए वित्तीय समावेशन की क्रांति का नेतृत्व कर रहे हैं।",
+      },
+      legacy: {
+        title: "भरोसे की विरासत",
+        content: "2020 में अपनी शुरुआत के बाद से, paisamilega भारतीय फिनटेक जगत में स्थिरता का एक आधार रहा है। हमने अपनी तकनीक को बेहतर बनाने और भारत के सबसे सम्मानित बैंकिंग संस्थानों के साथ गहरे संबंध बनाने में 6 साल से अधिक का समय बिताया है। हमारी यात्रा हमारे हजारों साथियों की सफलता की कहानियों से परिभाषित होती है, जिन्होंने प्रोफेशनल फाइनेंशियल एडवाइजरी के माध्यम से अपने जीवन को बदला है।",
+      },
+      stats: [
+        { label: "पंजीकृत साथी", value: "1,000+" },
+        { label: "विशेषज्ञ टीम सदस्य", value: "100+" },
+        { label: "बैंकिंग पार्टनर्स", value: "100+" },
+      ],
+      team: {
+        title: "Paisa Milega का दिल",
+        content: "100 से अधिक विशेषज्ञों की इन-हाउस टीम के साथ, हम बड़े पैमाने पर काम करते हैं ताकि यह सुनिश्चित हो सके कि हर लीड को ट्रैक किया जाए और हर भुगतान (payout) बिना किसी बाधा के हो। हमारी तकनीक, सपोर्ट और ऑपरेशंस की टीमें हमारे भोपाल ऑफिस से चौबीसों घंटे काम करती हैं ताकि देश भर में हमारे साथी परिवार को सशक्त बनाया जा सके। हम पारदर्शिता, गति और हर दिन आगे बढ़ने में आपकी मदद करने में विश्वास रखते हैं।",
+      },
+      mission: {
+        title: "हमारा लक्ष्य (Mission)",
+        content: "अगले अरब भारतीयों के लिए सबसे भरोसेमंद फाइनेंशियल सेतु बनना, और हर घर तक प्रोफेशनल फाइनेंशियल सेवाएं पहुंचाना।",
+      },
+      vision: {
+        title: "हमारा विजन",
+        content: "हर भारतीय को उस ज्ञान और डिजिटल टूल्स के साथ सशक्त बनाना जिससे वे आर्थिक रूप से स्वतंत्र हो सकें और अपनी संपत्ति बढ़ा सकें।",
       },
     },
   }
