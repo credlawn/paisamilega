@@ -215,7 +215,25 @@ export interface TranslationDict {
       keywords: string;
     };
     };
-    }export const translations: Record<Language, TranslationDict> = {
+  calculator: {
+    title: string;
+    subtitle: string;
+    ccLabel: string;
+    loanLabel: string;
+    accLabel: string;
+    estimatedEarnings: string;
+    perMonth: string;
+    cta: string;
+  };
+  faq: {
+    title: string;
+    subtitle: string;
+    questions: {
+      q: string;
+      a: string;
+    }[];
+  };
+}export const translations: Record<Language, TranslationDict> = {
   en: {
     nav: {
       products: "Financial Products",
@@ -736,6 +754,42 @@ export interface TranslationDict {
         description: "Paisa Milega is committed to protecting your personal information. Read our detailed privacy policy to understand how we handle your data.",
         keywords: "privacy policy, personal data protection, kyc data security, fintech privacy",
       },
+    },
+    calculator: {
+      title: "Calculate Your Potential Side Income",
+      subtitle: "See how much you can earn monthly by sharing simple bank links with your contacts.",
+      ccLabel: "Credit Cards referred per month",
+      loanLabel: "Personal/Business Loans referred per month",
+      accLabel: "Demat/Savings Accounts opened per month",
+      estimatedEarnings: "Estimated Monthly Earnings",
+      perMonth: "per month",
+      cta: "Register & Start Earning",
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Got questions? We have answers. Clear your doubts and start your earning journey.",
+      questions: [
+        {
+          q: "Is there any registration fee to join Paisa Milega?",
+          a: "No, joining Paisa Milega is 100% free. There are no registration fees, hidden charges, or security deposits at any stage.",
+        },
+        {
+          q: "When and how will I receive my commission payouts?",
+          a: "Your commissions are processed weekly and transferred directly to your verified bank account. Once a referred bank product is successfully approved by the partner bank, your payout is credited automatically.",
+        },
+        {
+          q: "Do I need any prior financial experience or degree?",
+          a: "No prior experience or degree is required. Anyone above 18 years can register. Through our Saathi Academy, we provide complete product training, step-by-step guidance, and ready-made WhatsApp shareable banners.",
+        },
+        {
+          q: "Can I do this work part-time along with my job or studies?",
+          a: "Absolutely! There are no fixed working hours, no targets, and no office visits. You are your own boss. You can easily work from home or college whenever you find time.",
+        },
+        {
+          q: "Is my personal data and my customer's data secure?",
+          a: "Yes, completely. Paisa Milega is strictly compliant with RBI Digital Lending guidelines. All data is securely stored on encrypted servers within India and is only shared with RBI-regulated banks after explicit customer consent.",
+        },
+      ],
     },
   },
   hi: {
@@ -1270,6 +1324,42 @@ export interface TranslationDict {
         description: "Paisa Milega आपकी निजी जानकारी की सुरक्षा के लिए प्रतिबद्ध है। हमारी विस्तृत प्राइवेसी पॉलिसी पढ़ें और समझें कि हम आपका डेटा कैसे संभालते हैं।",
         keywords: "privacy policy hindi, personal data protection, kyc security",
       },
-      },
-      },
-      };
+    },
+    calculator: {
+      title: "अपनी मासिक कमाई का हिसाब लगाएं",
+      subtitle: "चुनें कि आप एक महीने में कितने कस्टमर्स को बैंक ऑफर्स शेयर कर सकते हैं और अपनी कमाई देखें।",
+      ccLabel: "क्रेडिट कार्ड रेफरल (प्रति माह)",
+      loanLabel: "पर्सनल/बिजनेस लोन रेफरल (प्रति माह)",
+      accLabel: "बचत/डीमैट खाता रेफरल (प्रति माह)",
+      estimatedEarnings: "अनुमानित मासिक कमाई",
+      perMonth: "प्रति माह",
+      cta: "रजिस्ट्रेशन करें और कमाएं",
+    },
+    faq: {
+      title: "अक्सर पूछे जाने वाले सवाल (FAQs)",
+      subtitle: "मन में कोई सवाल है? यहाँ आपको सभी सवालों के सही और आसान जवाब मिलेंगे।",
+      questions: [
+        {
+          q: "क्या Paisa Milega से जुड़ने के लिए कोई फीस या चार्ज है?",
+          a: "नहीं, Paisa Milega से जुड़ना 100% मुफ्त है। किसी भी स्तर पर कोई रजिस्ट्रेशन फीस, सिक्योरिटी डिपॉजिट या छिपा हुआ चार्ज नहीं लिया जाता है।",
+        },
+        {
+          q: "मुझे मेरी कमाई का पेमेंट कब और कैसे मिलेगा?",
+          a: "आपकी कमाई हर हफ्ते सीधे आपके रजिस्टर्ड बैंक खाते में ट्रांसफर की जाती है। जैसे ही आपके द्वारा रेफर किया गया प्रोडक्ट बैंक द्वारा अप्रूव हो जाता है, आपका कमीशन वॉलेट में आ जाता है और फिर ट्रांसफर कर दिया जाता है।",
+        },
+        {
+          q: "क्या मुझे इसके लिए फाइनेंस की पढ़ाई या अनुभव की जरूरत है?",
+          a: "नहीं, इसके लिए किसी खास डिग्री या फाइनेंस के अनुभव की जरूरत नहीं है। 18 साल से ऊपर का कोई भी व्यक्ति साथी बन सकता है। हम साथी एकेडमी के जरिए फ्री ट्रेनिंग, वीडियो और शेयर करने के लिए व्हाट्सएप इमेजेस देते हैं।",
+        },
+        {
+          q: "क्या मैं इसे अपनी नौकरी या कॉलेज की पढ़ाई के साथ पार्ट-टाइम कर सकता हूँ?",
+          a: "हाँ, बिल्कुल! यहाँ काम करने का कोई फिक्स समय नहीं है और न ही कोई टारगेट है। आप अपने फ्री टाइम में, घर बैठे या चलते-फिरते अपने मोबाइल से काम कर सकते हैं।",
+        },
+        {
+          q: "क्या मेरी और मेरे ग्राहकों की डिटेल्स सुरक्षित रहेंगी?",
+          a: "जी हाँ, बिल्कुल सुरक्षित हैं। हम RBI की डिजिटल लेंडिंग गाइडलाइन्स का पूरी तरह पालन करते हैं। आपका डेटा भारत में ही स्थित एनक्रिप्टेड सर्वर्स पर सुरक्षित रहता है और केवल बैंक प्रोसेसिंग के लिए ही इस्तेमाल होता है।",
+        },
+      ],
+    },
+  },
+};
