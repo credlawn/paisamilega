@@ -116,7 +116,7 @@ export default function BlogDetailPage() {
             {blog.image ? (
               <Image 
                 src={getFileURL(blog.collectionId, blog.id, blog.image)}
-                alt={displayTitle}
+                alt={displayTitle || ""}
                 fill
                 className="object-cover"
                 priority

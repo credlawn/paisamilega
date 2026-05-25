@@ -21,9 +21,13 @@ export default function HowItWorks() {
 
       <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans mb-3">
             {t.home.howItWorks.title}
           </h2>
+          <div className="flex items-center justify-center gap-1.5">
+            <div className="h-1 w-12 rounded-full bg-gradient-to-r from-brand-green to-brand-orange opacity-80" />
+            <div className="h-1.5 w-1.5 rounded-full bg-brand-orange" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 relative">

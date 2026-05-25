@@ -26,7 +26,7 @@ export default function TechSupport() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           <div>
-            <span className="inline-flex items-center rounded-full bg-brand-green/10 px-4 py-1.5 text-[12px] font-bold text-brand-green border border-brand-green/20 mb-6 uppercase tracking-widest">
+            <span className="text-[11px] font-semibold text-brand-green tracking-wide uppercase mb-3 block">
               {t.home.tech.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight font-sans">

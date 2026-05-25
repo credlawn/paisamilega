@@ -82,7 +82,7 @@ export default function BlogListPage() {
                         {blog.image ? (
                           <Image 
                             src={getFileURL(blog.collectionId, blog.id, blog.image)}
-                            alt={displayTitle}
+                            alt={displayTitle || ""}
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                           />

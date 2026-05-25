@@ -22,7 +22,7 @@ interface BlogItem {
 }
 
 export default function BlogSection() {
-  const { language } = useLanguage();
+  const { t, language } = useLanguage();
   const [blogs, setBlogs] = useState<BlogItem[]>([]);
   const [loading, setLoading] = useState(true);
   const langPrefix = language === "hi" ? "/hi" : "";
@@ -43,6 +43,9 @@ export default function BlogSection() {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl text-left">
+            <span className="text-[11px] font-semibold text-brand-green tracking-wide uppercase mb-3 block">
+              {t.nav.academy}
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans mb-4">
               {language === 'en' ? "Latest Financial Insights" : "लेटेस्ट फाइनेंशियल जानकारी"}
             </h2>
@@ -82,7 +85,7 @@ export default function BlogSection() {
                     {blog.image ? (
                       <Image 
                         src={getFileURL(blog.collectionId, blog.id, blog.image)}
-                        alt={displayTitle}
+                        alt={displayTitle || ""}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
