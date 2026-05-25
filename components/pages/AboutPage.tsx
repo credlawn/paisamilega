@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/components/LanguageContext";
 
 export default function AboutPage() {
   const { t, language } = useLanguage();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = (language === "en" ? "About Us" : "हमारे बारे में") + " | Paisa Milega";
@@ -83,16 +85,32 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 sm:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Photo Placeholders */}
-                <div className="aspect-[4/5] rounded-3xl bg-stone-200 animate-pulse overflow-hidden relative border border-stone-300/50 shadow-inner">
-                  <div className="absolute inset-0 flex items-center justify-center text-stone-400 font-bold uppercase tracking-tighter text-[10px]">
-                    Team Photo Placeholder
-                  </div>
+                {/* Optimized Actual Photos - Now Clickable */}
+                <div 
+                  className="aspect-[4/5] rounded-3xl overflow-hidden relative border border-stone-300/50 shadow-lg group cursor-pointer"
+                  onClick={() => setSelectedImage("/gallery/office-image2.jpeg")}
+                >
+                  <Image 
+                    src="/gallery/office-image2.jpeg" 
+                    alt="Paisa Milega Team" 
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  />
+                  <div className="absolute inset-0 bg-brand-green/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <div className="aspect-[4/5] rounded-3xl bg-stone-200 animate-pulse overflow-hidden relative border border-stone-300/50 shadow-inner sm:mt-8">
-                  <div className="absolute inset-0 flex items-center justify-center text-stone-400 font-bold uppercase tracking-tighter text-[10px]">
-                    Office Photo Placeholder
-                  </div>
+                <div 
+                  className="aspect-[4/5] rounded-3xl overflow-hidden relative border border-stone-300/50 shadow-lg group sm:mt-8 cursor-pointer"
+                  onClick={() => setSelectedImage("/gallery/office-image7.jpeg")}
+                >
+                  <Image 
+                    src="/gallery/office-image7.jpeg" 
+                    alt="Paisa Milega Office" 
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  />
+                  <div className="absolute inset-0 bg-brand-green/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
               <div className="order-1 lg:order-2">
@@ -112,7 +130,7 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-16 sm:py-24 bg-white">
+        <section className="py-16 sm:py-24 bg-white border-b border-stone-100">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 text-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="p-10 rounded-[40px] bg-brand-orange text-white relative overflow-hidden shadow-2xl">
@@ -122,12 +140,119 @@ export default function AboutPage() {
               </div>
               <div className="p-10 rounded-[40px] bg-brand-green text-white relative overflow-hidden shadow-2xl">
                 <h3 className="text-2xl font-bold mb-4 relative z-10">{t.aboutPage.vision.title}</h3>
-                <p className="text-green-100 text-[15px] leading-relaxed relative z-10">{t.aboutPage.vision.content}</p>
+                <p className="text-green-100 text-[15px] leading-relaxed relative z-10 font-medium">{t.aboutPage.vision.content}</p>
                 <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl" />
               </div>
             </div>
           </div>
         </section>
+
+        {/* Life at Paisa Milega Gallery Section */}
+        <section className="py-16 sm:py-24 bg-[#fafaf9]">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4 font-sans tracking-tight">
+                {t.aboutPage.lifeAt.title}
+              </h2>
+              <p className="text-[15px] sm:text-[17px] text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
+                {t.aboutPage.lifeAt.desc}
+              </p>
+            </div>
+
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+              {[
+                { type: 'image', span: 'sm:col-span-2 sm:row-span-2', label: 'Main Team Celebration', src: '/gallery/office-image1.jpeg' },
+                { type: 'video', span: 'col-span-1 row-span-1', label: 'Office Tour', src: '/gallery/office-image10.jpeg', link: 'https://www.instagram.com/reel/C2o003ySeEg/?igsh=MTliaGV5eWtmbTBzdA==' },
+                { type: 'image', span: 'col-span-1 row-span-1', label: 'Saathi Workshop', src: '/gallery/office-image14.jpeg' },
+                { type: 'image', span: 'col-span-1 row-span-1', label: 'Tech Team at Work', src: '/gallery/office-image13.jpeg' },
+                { type: 'video', span: 'col-span-1 row-span-2', label: 'Founder\'s Message', src: '/gallery/office-image8.jpeg', link: 'https://www.instagram.com/reel/C2r-DspycRu/?igsh=MTZtbG45a2hxdzZjNQ==' },
+                { type: 'image', span: 'col-span-1 row-span-1', label: 'Customer Success Story', src: '/gallery/office-image9.jpeg' },
+                { type: 'image', span: 'sm:col-span-2 sm:row-span-1', label: 'Bhopal HQ Annual Event', src: '/gallery/office-image11.jpeg' },
+              ].map((item, idx) => (
+                <div 
+                  key={idx} 
+                  onClick={() => {
+                    if (item.type === 'video' && item.link) {
+                      window.open(item.link, '_blank');
+                    } else if (item.src) {
+                      setSelectedImage(item.src);
+                    }
+                  }}
+                  className={`group relative rounded-3xl overflow-hidden bg-stone-200 border border-stone-300/30 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 cursor-pointer ${item.span}`}
+                >
+                  {/* Actual Image */}
+                  <Image 
+                    src={item.src} 
+                    alt={item.label}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+
+                  {/* Overlay on Hover */}
+                  <div className="absolute inset-0 bg-brand-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Type Badge */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter shadow-sm border ${
+                      item.type === 'video' 
+                        ? 'bg-brand-orange text-white border-brand-orange/20' 
+                        : 'bg-white text-slate-900 border-stone-100'
+                    }`}>
+                      {item.type}
+                    </span>
+                  </div>
+
+                  {/* Icon Overlay for Videos */}
+                  {item.type === 'video' && (
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="h-12 w-12 rounded-full bg-white/90 text-brand-orange flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 ml-1">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Note */}
+            <div className="mt-16 text-center">
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-stone-100 text-[14px] font-bold text-slate-600 shadow-sm">
+                <span>Working together to empower Bharat</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-green animate-pulse" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Lightbox Modal */}
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/95 p-4 sm:p-8 backdrop-blur-md animate-fade-in"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button 
+              className="absolute top-6 right-6 text-white hover:text-brand-orange transition-colors z-[110]"
+              onClick={() => setSelectedImage(null)}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="h-8 w-8">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            
+            <div className="relative max-w-[95vw] max-h-[90vh] animate-zoom-in" onClick={(e) => e.stopPropagation()}>
+              <img 
+                src={selectedImage} 
+                alt="Full Preview" 
+                className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+              />
+            </div>
+          </div>
+        )}
 
       </main>
 

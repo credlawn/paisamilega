@@ -178,8 +178,12 @@ export interface TranslationDict {
       title: string;
       content: string;
     };
-  };
-  }export const translations: Record<Language, TranslationDict> = {
+    lifeAt: {
+      title: string;
+      desc: string;
+    };
+    };
+    }export const translations: Record<Language, TranslationDict> = {
   en: {
     nav: {
       products: "Financial Products",
@@ -663,6 +667,10 @@ export interface TranslationDict {
       vision: {
         title: "Our Vision",
         content: "Empowering every Indian with the knowledge and digital tools to become financially independent and grow their wealth.",
+      },
+      lifeAt: {
+        title: "Life at Paisa Milega",
+        desc: "A glimpse into our vibrant culture, team celebrations, and the passion that drives us every day.",
       },
     },
   },
@@ -1161,6 +1169,10 @@ export interface TranslationDict {
       vision: {
         title: "हमारा विजन",
         content: "हर भारतीय को उस ज्ञान और डिजिटल टूल्स के साथ सशक्त बनाना जिससे वे आर्थिक रूप से स्वतंत्र हो सकें और अपनी संपत्ति बढ़ा सकें।",
+      },
+      lifeAt: {
+        title: "Paisa Milega की झलकियां",
+        desc: "हमारे कल्चर, टीम के साथ बिताए खुशनुमा पलों और उस जुनून की एक झलक जो हमें आगे बढ़ाती है।",
       },
     },
   }
